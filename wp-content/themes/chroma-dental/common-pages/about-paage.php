@@ -53,8 +53,6 @@ get_header();?>
     $diplomas = $about['diplomas']; ?>
 		<section class="third-section">
 			<div class="third-section__bg1-help"></div>
-			<div class="third-section__bg2-help"></div>
-			<div class="third-section__bg3-help"></div>
 			<div class="container third-section__wrap">
 				<div class="third-section__diplomas">
 					<div class="octagon">

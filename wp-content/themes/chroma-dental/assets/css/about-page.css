@@ -1942,16 +1942,13 @@ body.compensate-for-scrollbar {
   .fancybox-thumbs__list a {
     max-width: calc(100% - 10px); } }
 
-main {
-  margin-top: 70px; }
-
 .first-section {
   position: relative;
-  padding: 10px 0; }
+  padding: 25px 0; }
   .first-section:before {
     position: absolute;
     content: '';
-    width: calc(calc((99vw - 1280px) / -2) * -1 + 1060px);
+    width: calc(calc((99vw - 1120px) / -2) * -1 + 900px);
     top: 0;
     bottom: 0;
     display: block;
@@ -1972,28 +1969,29 @@ main {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
   .first-section__text-content {
-    max-width: 60%; }
+    margin-top: 47px;
+    max-width: 456px; }
     .first-section__text-content_caption {
-      margin-bottom: 1.33rem;
+      margin-bottom: 24px;
       font-weight: 700;
       font-family: "Roboto";
-      font-size: 3.33rem;
+      font-size: 32px;
       line-height: 1.3em;
       text-transform: capitalize; }
     .first-section__text-content_text {
-      font-size: 1.2rem;
+      font-size: 14px;
       line-height: 1.5em; }
   .first-section__photo {
     padding: 31px 41px;
-    top: 50%;
+    margin-right: 194px;
     max-width: 35%;
     width: auto; }
     .first-section__photo_wrap img {
@@ -2002,30 +2000,30 @@ main {
       max-width: 100%; }
 
 .second-section {
-  margin: 72px 0 38px;
+  margin: 72px 0 85px;
   font-family: "Roboto"; }
   .second-section__caption {
-    font-size: 3.33rem;
+    font-size: 38px;
     line-height: 1.3em;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
     font-weight: 700; }
   .second-section__text {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 14px;
     line-height: 1.33em;
-    margin-bottom: 3.33rem; }
+    margin-bottom: 2rem; }
   .second-section blockquote p {
-    font-size: 1.2rem;
+    font-size: 14px;
     font-weight: 400;
     font-style: italic;
     line-height: 1.33em;
-    margin-bottom: 22px; }
+    margin-bottom: 20px; }
   .second-section address p {
-    font-size: 2.13rem;
+    font-size: 24px;
     text-align: right; }
 
 .third-section {
-  padding-top: 46px;
+  padding-top: 52px;
   padding-bottom: 117px;
   position: relative; }
   .third-section__wrap {
@@ -2038,10 +2036,10 @@ main {
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
@@ -2049,10 +2047,11 @@ main {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    margin: 38px auto 0; }
+    margin: 0 auto; }
   .third-section__diplomas {
+    margin-right: 80px;
     padding: 31px 41px;
-    max-width: 365px;
+    max-width: 268px;
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2110,17 +2109,17 @@ main {
       .third-section__diplomas_img:hover, .third-section__diplomas_img:active, .third-section__diplomas_img:focus {
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5); }
   .third-section__text-content {
-    max-width: 44.33rem;
-    margin-top: 35px;
+    max-width: 514px;
+    margin-top: 30px;
     font-family: "Roboto"; }
     .third-section__text-content_caption {
       font-weight: 700;
-      font-size: 3.33rem;
+      font-size: 38px;
       line-height: 150%;
-      margin-bottom: 4.53rem; }
+      margin-bottom: 25px; }
     .third-section__text-content_text {
       font-weight: 300;
-      font-size: 1.47rem;
+      font-size: 16px;
       line-height: 130.7%;
       margin-bottom: 1.5rem; }
   .third-section__bg1-help {
