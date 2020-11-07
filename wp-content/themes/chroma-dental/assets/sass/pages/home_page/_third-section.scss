@@ -1,0 +1,31 @@
+.third-section {
+  height: 52.47rem;
+  background-image: url("../../../img/home-page/third-section-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+
+  & .container {
+    position: relative;
+    height: 100%;
+  }
+
+  & .banner {
+    position: absolute;
+    max-width: 40.2rem;
+    top: 10%;
+
+    &__wrap {
+      padding: 3rem 3.67rem 2.67rem;
+    }
+
+    &__caption {
+      max-width: 21.33rem;
+      margin-bottom: 2rem;
+    }
+
+    &__text {
+      margin-bottom: 1.8rem;
+    }
+  }
+}

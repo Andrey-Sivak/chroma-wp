@@ -1,0 +1,27 @@
+.home {
+
+  & .covid {
+    padding-top: 2.6rem;
+    padding-bottom: 2.1rem;
+    background-image: url("../../../img/home-page/sec-section-bg.png");
+
+    &__caption {
+      font-weight: 400;
+      font-size: 1.87rem;
+    }
+
+    &__subcaption {
+      letter-spacing: 0.03em;
+      font-weight: 300;
+      font-size: .93rem;
+    }
+
+    &__item {
+
+      &_text {
+        font-weight: 300;
+        font-size: .93rem;
+      }
+    }
+  }
+}

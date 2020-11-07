@@ -1,0 +1,41 @@
+.introduce {
+  margin-top: 11px;
+  margin-bottom: 106px;
+  font-family: $roboto;
+
+  &__caption {
+    line-height: 150%;
+    font-weight: 700;
+    font-size: 2.53rem;
+    margin-bottom: 3.33rem;
+  }
+
+  &__content {
+    @include flex( $flex-wrap: nowrap );
+
+  }
+
+  &__img {
+    margin-top: 28px;
+    margin-right: 4rem;
+    width: fit-content;
+    padding: 31px 41px;
+  }
+
+  &__text-content {
+
+    &_caption {
+      font-weight: 700;
+      line-height: 197.5%;
+      font-size: 1.6rem;
+    }
+  }
+
+  & .bull-list {
+    margin-bottom: 2.53rem;
+  }
+
+  & .consultation-btns {
+    flex-wrap: nowrap;
+  }
+}
