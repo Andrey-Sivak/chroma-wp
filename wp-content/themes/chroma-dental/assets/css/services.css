@@ -997,10 +997,10 @@ body {
   .banner__caption {
     text-transform: capitalize;
     font-weight: 300;
-    font-size: 2.53rem;
-    line-height: 1.21em; }
+    font-size: 28px;
+    line-height: 1.2em; }
   .banner__text {
-    font-size: .93rem;
+    font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 1.5em;
     color: #222425; }
@@ -1010,7 +1010,7 @@ body {
     text-transform: uppercase;
     letter-spacing: .12em;
     text-decoration: underline;
-    font-size: 1.06rem;
+    font-size: 1rem;
     line-height: 1.19em;
     color: #000; }
     .banner__link:hover, .banner__link:active, .banner__link:focus {
@@ -1176,6 +1176,20 @@ body {
       font-weight: 400;
       font-size: 1.2rem;
       line-height: 1; }
+
+.sale-block {
+  max-width: 1280px;
+  width: 100%;
+  padding: 13px;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  text-align: center;
+  font-size: 24px;
+  line-height: 29px; }
+  .sale-block > span {
+    color: #DA2314; }
 
 .why-we {
   margin: 100px auto 110px;

@@ -107,7 +107,7 @@ get_header();?>
                       <figure class="four-section__list_item-img-wrap">
                         <img src="<?= get_the_post_thumbnail_url($services_child->ID, 'thumbnail'); ?>" alt="icon" class="four-section__list_item-img">
                       </figure>
-                      <p class="four-section__list_item-text"><?= $services_child->post_title; ?></p>
+                      <a href="<?= $services_child->guid; ?>" class="four-section__list_item-text"><?= $services_child->post_title; ?></a>
                     </div>
 
 		          <?php endforeach; ?>
