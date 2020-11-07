@@ -14,4 +14,12 @@ $z-layers: (
         default: 1,
 );
 
-$container: 1280px;
+$container: 1120px;
+
+main {
+  padding-top: 96px;
+
+  &.home {
+    padding-top: 0;
+  }
+}

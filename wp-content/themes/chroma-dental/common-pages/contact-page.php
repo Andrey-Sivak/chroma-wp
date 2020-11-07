@@ -6,13 +6,10 @@ get_header();?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-	<main id="primary" class="site-main home">
+	<main id="primary" class="site-main">
 
     <?php $contact_page_caption_block = get_field('caption_block'); ?>
 		<section class="container first-section">
-			<figure class="first-section__logo">
-				<img src="<?= $contact_page_caption_block['logo']; ?>" alt="chroma dental" class="first-section__logo_img">
-			</figure>
 			<h2 class="first-section__caption"><?= $contact_page_caption_block['caption']; ?></h2>
 		</section>
 	  <?php ?>
