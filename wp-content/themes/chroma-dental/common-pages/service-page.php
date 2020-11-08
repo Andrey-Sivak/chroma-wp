@@ -6,47 +6,15 @@ get_header();
 
 ?>
 
-<?php if ( have_posts() ) while ( have_posts() ) : the_post();
-
-	/*$fields = get_field_objects();
-
-	if( $fields )
-	{
-		foreach( $fields as $field_name => $field )
-		{
-		  switch ($field) {
-          case $fields['introduce_block']:
-	          get_template_part('template-parts/blocks/introduce');
-	          break;
-          case $fields['calculator']:
-	          get_template_part('template-parts/components/calculator');
-	          break;
-          case $fields['difference']:
-            $section = get_field('difference');
-            if ( $section['caption'] ) {
-	            get_template_part('template-parts/blocks/difference');
-            }
-	          break;
-          case $fields['cov']:
-            if ( $fields['cov']['value']) {
-	            $covid_section = get_field('covid_block', 'option');
-	            if ($covid_section) {
-		            get_template_part('template-parts/blocks/covid');
-	            }
-            }
-            break;
-          case $fields['about_service_img']:
-            $about_with_img = get_field('about_service_img');
-            if ($about_with_img[0]['section_caption_text'] != '') {
-              get_template_part('template-parts/blocks/about-service-with-img');
-            }
-            break;
-
-      }
-		}
-	}*/?>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<main id="primary" class="site-main service">
+
+    <div class="breadcrumbs">
+      <p>Services</p>
+      <p>></p>
+      <p><?php the_title(); ?></p>
+    </div>
 
     <?php
 
