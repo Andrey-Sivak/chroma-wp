@@ -122,7 +122,7 @@ get_header();?>
     <section class="five-section">
       <div class="container">
         <h2 class="five-section__caption"><?= $image_block['caption']; ?></h2>
-        <p class="sale-block">LIMITED 50% OFF November SALE! <span>Regularly $499</span> NOW $199 !!!</p>
+        <?php get_template_part('template-parts/components/sale-block'); ?>
         <div class="five-section__wrap-img">
           <span class="five-section__circle"></span>
           <p class="five-section__img-text">slide and see</p>

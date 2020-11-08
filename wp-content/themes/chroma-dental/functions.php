@@ -229,6 +229,12 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Sale block',
+		'menu_title'	=> 'Sale block',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
 }
 
 require get_template_directory() . '/inc/sub_menu_walker.php';

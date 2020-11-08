@@ -168,9 +168,9 @@ body {
           -ms-flex-wrap: wrap;
               flex-wrap: wrap; } }
   .menu > li {
-    font-size: 1rem;
+    font-size: 13px;
     letter-spacing: .1em;
-    line-height: 1.2rem;
+    line-height: 16px;
     text-transform: uppercase; }
     @media (max-width: 992px) {
       .menu > li {
@@ -361,7 +361,7 @@ body {
             flex-wrap: wrap; }
   .header__logo {
     display: block;
-    max-width: 16.73rem;
+    max-width: 235px;
     max-height: 2.8rem;
     width: 100%;
     height: auto;
@@ -447,6 +447,8 @@ body {
                 transform: rotate(-45deg) translate(3px, -7px);
         width: 28px; }
   .header__btn {
+    width: 268px;
+    text-align: center;
     background-color: #fff;
     height: 100%;
     display: -webkit-box;
@@ -471,8 +473,8 @@ body {
             flex-wrap: wrap;
     padding: 0 21px;
     text-transform: uppercase;
-    font-size: .8rem;
-    line-height: 1rem;
+    font-size: 14px;
+    line-height: 17px;
     letter-spacing: 0.08em;
     font-weight: 500;
     color: #000;
@@ -488,24 +490,6 @@ body {
     @media (max-width: 992px) {
       .header__btn {
         display: none; } }
-  .header.black {
-    background-color: #000; }
-    .header.black .menu__item_link {
-      color: #fff; }
-      .header.black .menu__item_link:before {
-        background-color: #fff; }
-    .header.black .header__btn {
-      background-color: #8BBECF; }
-    .header.black .drop:after, .header.black .drop:before {
-      background-color: #fff; }
-    .header.black .drop__menu_item {
-      background-color: #000; }
-      .header.black .drop__menu_item:hover, .header.black .drop__menu_item:active, .header.black .drop__menu_item:focus {
-        background-color: #404040; }
-      .header.black .drop__menu_item:not(:last-child) {
-        border-bottom: 1px solid #fff; }
-    .header.black .drop__menu_link {
-      color: #ffffff; }
 
 .footer {
   background-color: #000;
@@ -1193,6 +1177,8 @@ body {
   text-align: center;
   font-size: 24px;
   line-height: 29px; }
+  .sale-block > p {
+    font-weight: 600; }
   .sale-block > span {
     color: #DA2314; }
 
@@ -1948,7 +1934,7 @@ body.compensate-for-scrollbar {
   .first-section:before {
     position: absolute;
     content: '';
-    width: calc(calc((99vw - 1120px) / -2) * -1 + 900px);
+    width: calc(calc((99vw - 1120px) / -2) * -1 + 855px);
     top: 0;
     bottom: 0;
     display: block;
