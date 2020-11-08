@@ -1077,9 +1077,9 @@ body {
               transform: rotate(37deg); }
 
 .breadcrumbs {
+  width: 100%;
   position: absolute;
   top: 16px;
-  left: calc((100% - 1120px) / 2);
   font-size: 14px;
   line-height: 150.5%;
   letter-spacing: .01em;
@@ -1087,9 +1087,15 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  .breadcrumbs > p {
-    font-weight: 400;
-    margin-right: 4px; }
+  .breadcrumbs .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+    .breadcrumbs .container > p {
+      font-weight: 400;
+      margin-right: 4px; }
 
 .covid {
   padding: 3rem 0;

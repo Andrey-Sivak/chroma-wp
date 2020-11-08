@@ -1,14 +1,19 @@
 .breadcrumbs {
+  width: 100%;
   position: absolute;
   top: 16px;
-  left: calc((100% - 1120px) / 2);
   font-size: 14px;
   line-height: 150.5%;
   letter-spacing: .01em;
   display: flex;
 
-  & > p {
-    font-weight: 400;
-    margin-right: 4px;
+  & .container {
+    display: flex;
+    width: 100%;
+
+    & > p {
+      font-weight: 400;
+      margin-right: 4px;
+    }
   }
 }

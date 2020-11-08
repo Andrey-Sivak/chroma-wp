@@ -11,9 +11,11 @@ get_header();
 	<main id="primary" class="site-main service">
 
     <div class="breadcrumbs">
-      <p>Services</p>
-      <p>></p>
-      <p><?php the_title(); ?></p>
+      <div class="container">
+        <p>Services</p>
+        <p>></p>
+        <p><?php the_title(); ?></p>
+      </div>
     </div>
 
     <?php
