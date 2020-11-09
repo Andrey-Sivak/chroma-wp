@@ -23,11 +23,13 @@ get_header();?>
           <?php get_template_part('template-parts/blocks/covid'); ?>
         </div>
         <div class="slider__item third">
-          <div class="slider__item_content">
-            <h2 class="slider__item_caption">Transform your smile with Invisalign® for 125 $ a month</h2>
-            <p class="slider__item_text">How does Invisalign® treatment work?</p>
-            <p class="slider__item_text">3 easy steps can put you on the path to your brand-new smile.</p>
-            <a href="#" class="btn slider__item_btn">Book an appointment today</a>
+          <div class="container">
+            <div class="slider__item_content">
+              <h2 class="slider__item_caption">Transform your smile with Invisalign® for 125 $ a month</h2>
+              <p class="slider__item_text">How does Invisalign® treatment work?</p>
+              <p class="slider__item_text">3 easy steps can put you on the path to your brand-new smile.</p>
+              <a href="#" class="btn slider__item_btn">Book an appointment today</a>
+            </div>
           </div>
         </div>
         <div class="slider__item four">
@@ -127,6 +129,7 @@ get_header();?>
           <span class="five-section__circle"></span>
           <p class="five-section__img-text">slide and see</p>
           <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img.png'; ?>" alt="img" class="five-section__img">
+          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-mob.jpg'; ?>" alt="img" class="five-section__img mob">
         </div>
 	      <?php get_template_part('template-parts/components/order-free-consultation'); ?>
       </div>

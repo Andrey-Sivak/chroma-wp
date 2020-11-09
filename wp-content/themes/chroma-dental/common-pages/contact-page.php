@@ -8,28 +8,19 @@ get_header();?>
 
 	<main id="primary" class="site-main">
 
-    <?php $contact_page_caption_block = get_field('caption_block'); ?>
-		<section class="container first-section">
-			<h2 class="first-section__caption"><?= $contact_page_caption_block['caption']; ?></h2>
-		</section>
-	  <?php ?>
-
 		<section class="container second-section">
 			<div class="description-block">
+		    <?php $contact_page_caption_block = get_field('caption_block'); ?>
+        <h2 class="second-section__main-caption"><?= $contact_page_caption_block['caption']; ?></h2>
 		    <?php $contact_page_text_block = get_field('text_block'); ?>
 				<h2 class="description-block__caption"><?= $contact_page_text_block['caption']; ?></h2>
 				<p class="description-block__text"><?= $contact_page_text_block['text']; ?></p>
-				<div class="description-block__btns">
-					<a href="#" class="btn description-block__btns_btn">Schedule an free consultation</a>
-					<p class="description-block__btns_call">Or call to book a free consultation:
-						<span>Downtown Office - <a href="tel:<?php the_field('phone', 'option'); ?>"><?php the_field('phone', 'option'); ?></a></span>
-					</p>
-				</div>
-        <?php $services_pages_query = new WP_Query();
-        $all_wp_pages = $services_pages_query->query([
-          'post_type' => 'page',
-          'posts_per_page' => -1,
-        ]);
+        <?php get_template_part('template-parts/components/order-free-consultation'); ?>
+          <?php $services_pages_query = new WP_Query();
+          $all_wp_pages = $services_pages_query->query([
+            'post_type' => 'page',
+            'posts_per_page' => -1,
+          ]);
 
         $services_parent_page = get_page_by_title('Services');
         $services_children = get_page_children($services_parent_page->ID, $all_wp_pages);
