@@ -60,13 +60,18 @@
 				<div class="third-section__right_map">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.2656754737127!2d-79.38591397100674!3d43.76734362994252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d4c7f5fd9bb%3A0x1769d2f59ba6dcfc!2s595%20Sheppard%20Ave%20E%2C%20North%20York%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1602691137167!5m2!1sen!2s" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 				</div>
-				<figure class="third-section__right_img">
-					<img src="../dist/img/services/map-small-img.jpg" alt="map">
-				</figure>
-				<div class="third-section__right_img">
-					<img src="../dist/img/services/address-img.jpg" alt="img">
-					<p></p>
-				</div>
+        <div class="map-img"></div>
+        <div class="places">
+          <div class="place">
+            <p class="place__caption">595 Sheppard Ave E, North York, ON Unit #206,207 and 208</p>
+          </div>
+          <div class="place">
+            <p class="place__caption">We are just across from Bayview Village Shopping Centre</p>
+          </div>
+          <div class="place">
+            <p class="place__caption">FREE Visitor Parking Easy access to 401, DVP</p>
+          </div>
+        </div>
 			</div>
 		</div>
 	</section>
