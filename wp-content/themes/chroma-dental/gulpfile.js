@@ -50,25 +50,16 @@ function styles() {
 		.pipe(browserSync.stream());
 }
 
-/*function styles() {
-
-	const dist = './dist/css';
-	return gulp.src('./assets/sass/!**!/!*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass.sync().on('error', sass.logError))
-		.pipe(postcss([ autoprefixer() ]))
-        .pipe(rename('all.css'))
-		.pipe(sourcemaps.write('.'))
-		.pipe(replace(/([../]{3,})/g, '../'))
-		.pipe(gulp.dest( dist ))
-		.pipe(browserSync.stream());
-}*/
-
 function scripts() {
 	return gulp.src('assets/js/main.js')
 		.pipe(webpack(webpackConfig))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(browserSync.stream());
+}
+
+function libs() {
+	return gulp.src('assets/libs/*')
+		.pipe(gulp.dest('dist/libs'));
 }
 
 function img() {
@@ -115,7 +106,7 @@ gulp.task('img', img);
 gulp.task('fonts', fonts);
 
 let build = gulp.series(clean,
-	gulp.parallel(gulp.series( scss, styles ), scripts, img, svg, /*html,*/ fonts)
+	gulp.parallel(gulp.series( scss, styles ), libs, scripts, img, svg, /*html,*/ fonts)
 );
 
 gulp.task('build', build);

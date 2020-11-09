@@ -34,6 +34,24 @@
 	  bloginfo( 'name' );
 	  ?>
   </title>
+	<?php if( ! is_home() ): ?>
+    <script src="<?= get_template_directory_uri() . '/dist/libs/wow.js' ?>"></script>
+    <script>
+
+        //- new WOW().init();
+
+        wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: false,
+            live: true
+        });
+        wow.init();
+
+    </script>
+	<?php endif; ?>
+
 
 	<?php wp_head(); ?>
 </head>

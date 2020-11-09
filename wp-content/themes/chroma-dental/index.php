@@ -53,7 +53,7 @@ get_header();?>
           </div>
         </div>
       </div>
-      <div class="slider__offer">
+      <div class="slider__offer wow animate__fadeInLeftBig" data-wow-offset="10" data-wow-duration="1s">
         <p class="slider__offer_text">Plan Your Visit Now</p>
         <a href="#" class="btn slider__offer_btn">book an appointment</a>
       </div>
@@ -68,7 +68,7 @@ get_header();?>
     <?php $first_text_block = get_field('home-first-text_block'); ?>
     <section class="third-section">
       <div class="container">
-        <div class="banner">
+        <div class="banner wow animate__fadeInLeftBig" data-wow-offset="10" data-wow-duration="1s">
           <div class="banner__wrap">
             <span class="banner__rt-top corner"></span>
             <span class="banner__lt-top corner"></span>
@@ -95,7 +95,7 @@ get_header();?>
       if($services_children) : ?>
       <section class="four-section">
         <div class="container">
-          <div class="banner">
+          <div class="banner wow animate__fadeInRightBig" data-wow-offset="10" data-wow-duration="1s">
             <div class="banner__wrap">
               <span class="banner__rt-top corner"></span>
               <span class="banner__lt-top corner"></span>
