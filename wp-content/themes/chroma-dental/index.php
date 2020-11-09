@@ -128,6 +128,7 @@ get_header();?>
           <p class="five-section__img-text">slide and see</p>
           <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img.png'; ?>" alt="img" class="five-section__img">
         </div>
+	      <?php get_template_part('template-parts/components/order-free-consultation'); ?>
       </div>
     </section>
 
