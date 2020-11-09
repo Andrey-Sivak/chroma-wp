@@ -830,11 +830,11 @@ body {
           flex-wrap: wrap;
   font-family: "Montserrat"; }
   .consultation-btns__btn {
-    width: 383px;
+    width: 312px;
     border-radius: 5px;
     margin-right: 1.2rem;
-    padding: 14px 0 12px;
-    font-size: 1.2rem;
+    padding: 15px 0 16px;
+    font-size: 14px;
     font-weight: 500; }
   .consultation-btns__call-block {
     background-color: rgba(111, 152, 144, 0.05);
