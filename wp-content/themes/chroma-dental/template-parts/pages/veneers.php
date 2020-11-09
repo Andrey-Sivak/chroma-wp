@@ -1,4 +1,6 @@
 <?php
+get_template_part('template-parts/blocks/short-introduce');
+
 get_template_part('template-parts/blocks/service-offer');
 
 get_template_part('template-parts/components/calculator');
