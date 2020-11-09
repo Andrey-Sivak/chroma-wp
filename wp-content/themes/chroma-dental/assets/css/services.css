@@ -1880,6 +1880,41 @@ body {
           font-size: 16px;
           line-height: 20px; }
 
+.cosmetic-dentistry .first-section {
+  margin-top: -96px;
+  padding-top: 180px;
+  padding-bottom: 138px;
+  text-align: center;
+  background-image: url("../../../img/services/cosmetic-dentistry-bg.jpg");
+  background-size: cover;
+  background-position: center; }
+  .cosmetic-dentistry .first-section__caption {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto 58px;
+    font-size: 32px;
+    line-height: 150.5%;
+    font-weight: 700;
+    color: #fff;
+    background-color: #6F9890;
+    padding: 3px 30px; }
+  .cosmetic-dentistry .first-section__text {
+    font-size: 24px;
+    line-height: 150.5%;
+    font-weight: 600;
+    margin-bottom: 93px; }
+  .cosmetic-dentistry .first-section .consultation-btns {
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
+    .cosmetic-dentistry .first-section .consultation-btns__call-block {
+      background-color: #fff; }
+
 .emergency .second-section {
   font-family: "Roboto";
   width: 100%;
