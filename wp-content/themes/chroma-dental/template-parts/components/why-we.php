@@ -2,7 +2,7 @@
 $why_we = get_field('why_we', 'option');
 ?>
 
-<section class="why-we">
+<section class="why-we container">
 	<figure class="why-we__logo">
 		<img src="<?= $why_we['logo']; ?>" alt="chroma dental" class="why-we__logo_img">
 	</figure>

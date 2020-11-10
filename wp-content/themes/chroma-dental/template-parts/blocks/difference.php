@@ -1,6 +1,6 @@
 <?php $difference = get_field('difference'); ?>
 
-<section class="difference">
+<section class="difference container">
     <h2 class="difference__caption"><?= $difference['caption']; ?></h2>
     <div class="difference__wrap">
       <?php $difference_images = $difference['images'];

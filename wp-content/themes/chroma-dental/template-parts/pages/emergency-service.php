@@ -47,7 +47,7 @@
 	get_template_part('template-parts/blocks/covid');
 	?>
 
-	<section class="third-section">
+	<section class="third-section container">
 		<h2 class="service__section-caption">Emergency dentist near you at North York, Toronto</h2>
 		<div class="third-section__content">
 			<div class="third-section__left">

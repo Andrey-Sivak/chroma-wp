@@ -1,4 +1,4 @@
-<section id="<?php echo esc_attr( $id ); ?>" class="about-service">
+<section id="<?php echo esc_attr( $id ); ?>" class="about-service container">
 	<?php if ( have_rows( 'about_service_img' ) ): ?>
 	  <?php while ( have_rows( 'about_service_img' ) ) : the_row(); ?>
       <?php if ( get_row_layout() == 'section_caption' ) : ?>

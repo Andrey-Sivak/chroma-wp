@@ -1,7 +1,7 @@
 <?php $reviews_block = get_field('reviews');
 $reviews = $reviews_block['review'];
 if ( !empty($reviews) ) : ?>
-    <div class="reviews">
+    <div class="reviews container">
       <?php foreach ($reviews as $review) : ?>
       <div class="review">
         <?php if ($review['caption']) : ?>

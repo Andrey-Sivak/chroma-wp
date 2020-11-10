@@ -9,7 +9,7 @@ $calculator_items_filter = array_filter($calculator_items_img_arr);
 if ($calculator) : ?>
 
 <section id="calculator" class="calculator <?php if(empty($calculator_items_filter)) echo 'no-image'; ?>">
-	<div class="calculator__wrap">
+	<div class="calculator__wrap container">
 		<h2 class="calculator__caption"><?= $calculator['title']; ?></h2>
 		<p class="calculator__subcaption"><?= $calculator['note']; ?></p>
 		<div class="calculator__select-age calculator__list" id="select-age">

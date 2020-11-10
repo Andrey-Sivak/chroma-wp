@@ -6,6 +6,14 @@ get_header();?>
 
 	<main id="primary" class="site-main about">
 
+    <div class="breadcrumbs">
+      <div class="container">
+        <p>Home</p>
+        <p>></p>
+        <p><?php the_title(); ?></p>
+      </div>
+    </div>
+
     <?php $introduce_block = get_field('introduce_block'); ?>
 		<section class="first-section">
       <div class="container">
