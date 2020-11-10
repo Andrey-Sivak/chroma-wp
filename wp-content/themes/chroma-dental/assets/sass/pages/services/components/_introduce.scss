@@ -4,15 +4,23 @@
   font-family: $roboto;
 
   &__caption {
-    line-height: 150%;
+    line-height: 140%;
     font-weight: 700;
     font-size: 28px;
     margin-bottom: 30px;
+
+    @include response-to(small) {
+      font-size: 23px;
+    }
   }
 
   &__content {
     @include flex( $flex-wrap: nowrap );
 
+    @include response-to(small) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img {
@@ -20,6 +28,10 @@
     margin-right: 4rem;
     width: fit-content;
     padding: 31px 41px;
+
+    @include response-to(small) {
+      margin: 0 0 44px;
+    }
   }
 
   &__photo_wrap {
@@ -29,6 +41,17 @@
       max-width: 430px;
       height: auto;
       width: auto;
+
+      @include response-to(medium) {
+        max-width: 220px;
+      }
+
+      @include response-to(small) {
+        margin-right: 0;
+        max-width: 300px;
+        width: 100%;
+      }
+
     }
   }
 
@@ -38,6 +61,11 @@
       font-weight: 700;
       line-height: 197.5%;
       font-size: 18px;
+
+      @include response-to(small) {
+        font-size: 24px;
+        line-height: 140%;
+      }
     }
   }
 
@@ -47,5 +75,17 @@
 
   & .consultation-btns {
     flex-wrap: nowrap;
+
+    @include response-to(large) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__btn {
+
+      @include response-to(large) {
+        margin-bottom: 16px;
+      }
+    }
   }
 }

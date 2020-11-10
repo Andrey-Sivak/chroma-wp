@@ -2,6 +2,10 @@
   margin: 70px auto 0;
   width: 100%;
 
+  @include response-to(small) {
+    margin: 45px 0;
+  }
+
   &__caption {
     margin-bottom: 70px;
     text-transform: uppercase;
@@ -10,6 +14,11 @@
     line-height: 150%;
     font-size: 2.53rem;
     text-align: center;
+
+    @include response-to(small) {
+      font-size: 32px;
+      margin-bottom: 32px;
+    }
   }
 
   &__wrap {
@@ -19,6 +28,12 @@
   &__img {
     max-width: 48%;
     margin-bottom: 50px;
+
+    @include response-to(small) {
+      margin-bottom: 24px;
+      max-width: 450px;
+      width: 100%;
+    }
 
     & > img {
       max-width: 100%;
@@ -30,6 +45,10 @@
     width: fit-content;
     flex-direction: column;
     align-items: center;
+
+    @include response-to(small) {
+      margin-bottom: 0;
+    }
 
     &__call-block {
       margin-top: 16px;

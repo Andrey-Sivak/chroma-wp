@@ -8,14 +8,18 @@
     font-size: 16px;
     font-weight: 500;
 
+    @include response-to(small) {
+      margin-top: 15px;
+    }
+
     &:before {
       position: absolute;
       content: '';
       width: 14px;
-      height: 16px;
+      height: 14px;
       border: 2px solid #8BBECF;
       border-radius: 50%;
-      top: 7px;
+      top: 6px;
       left: 0;
       background-color: #fff;
     }

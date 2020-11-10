@@ -1,7 +1,10 @@
 .why-we {
   margin: 100px auto 110px;
-  width: 83.66%;
   text-align: center;
+
+  @include response-to(small) {
+    margin: 40px 0;
+  }
 
   &__logo {
     max-width: 375px;
@@ -9,6 +12,10 @@
     height: auto;
     display: block;
     margin: 0 auto 3.53rem;
+
+    @include response-to(small) {
+      margin-bottom: 32px;
+    }
 
     &_img {
       width: 100%;
@@ -22,6 +29,10 @@
     letter-spacing: .01em;
     font-weight: 700;
     margin-bottom: 25px;
+
+    @include response-to(small) {
+      margin-bottom: 44px;
+    }
   }
 
   &__description {
@@ -39,6 +50,15 @@
   &__reason {
     width: 23%;
     margin-bottom: 80px;
+
+    @include response-to(medium) {
+      width: 32%;
+      margin-bottom: 40px;
+    }
+
+    @include response-to(small) {
+      width: 48%;
+    }
 
     &_img {
       $height: 60px;
@@ -61,6 +81,10 @@
       font-weight: 600;
       font-size: 1.07rem;
       line-height: 1.25em;
+
+      @include response-to(small) {
+        font-size: 14px;
+      }
     }
 
     &_text {

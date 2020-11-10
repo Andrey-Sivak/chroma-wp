@@ -2,27 +2,57 @@
   margin-top: 40px;
   margin-bottom: 150px;
 
+  @include response-to(small) {
+    margin-bottom: 50px;
+  }
+
   &__caption {
     font-size: 32px;
     line-height: 150.5%;
     text-align: center;
     font-weight: 700;
     margin-bottom: 40px;
+
+    @include response-to(small) {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
   }
 
   &__content {
     display: flex;
     align-items: stretch;
 
+    @include response-to(small) {
+      flex-direction: column;
+    }
+
     &_text-block {
       max-width: 643px;
       margin-right: 73px;
+
+      @include response-to(large) {
+        max-width: 500px;
+      }
+      @include response-to(medium) {
+        max-width: 450px;
+      }
+
+      @include response-to(small) {
+        order: 2;
+        margin-right: 0;
+        margin-top: 24px;
+      }
 
       & > p {
         font-size: 16px;
         line-height: 150.5%;
         letter-spacing: .01em;
         margin-bottom: 48px;
+
+        @include response-to(small) {
+          font-size: 18px;
+        }
       }
     }
 
@@ -35,6 +65,13 @@
       background-color: rgba( color( main-color ), .05 );
       position: relative;
 
+      @include response-to(small) {
+        order: 1;
+        width: 100%;
+        margin: 0 -15px;
+        padding: 48px 15px;
+      }
+
       &:after {
         content: '';
         z-index: 1;
@@ -44,6 +81,10 @@
         left: 100%;
         right: calc((100vw - 10px - 1120px) / -2);
         background-color: rgba( color( main-color ), .05 );
+
+        @include response-to(small) {
+          content: none;
+        }
       }
     }
 
@@ -59,6 +100,10 @@
       background-color: #fff;
       font-family: $roboto;
       margin: 5px 0;
+
+      @include response-to(small) {
+        margin: 12px 0;
+      }
 
       & > a {
         color: color( main-color );

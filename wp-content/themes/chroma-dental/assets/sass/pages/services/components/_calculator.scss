@@ -3,6 +3,11 @@
   padding: 42px 0 57px;
   margin-bottom: 102px;
 
+  @include response-to(small) {
+    margin-bottom: 40px;
+    padding: 30px 0 47px;
+  }
+
   &__wrap {
     text-align: center;
   }
@@ -14,6 +19,11 @@
     text-transform: uppercase;
     line-height: 1.18em;
     margin-bottom: 15px;
+
+    @include response-to(small) {
+      font-size: 28px;
+      margin-bottom: 21px;
+    }
   }
 
   &__subcaption {
@@ -21,18 +31,26 @@
     font-size: 24px;
     line-height: 1.21em;
     margin-bottom: 2.67rem;
+
+    @include response-to(small) {
+      display: none;
+    }
   }
 
   &__list {
     max-width: 575px;
     width: 100%;
-    @include flex( $j-c: space-between );
+    @include flex( $j-c: space-between, $a-i:stretch );
     margin-left: auto;
     margin-right: auto;
   }
 
   &__select-age {
     margin-bottom: 3.33rem;
+
+    @include response-to(small) {
+      margin-bottom: 15px;
+    }
 
     &_item {
       width: 31%;
@@ -50,6 +68,11 @@
         background-color: rgba(color( main-color ), .7 );
       }
 
+      @include response-to(small) {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+
       &.active {
         background-color: color( main-color );
       }
@@ -63,10 +86,18 @@
     font-size: 1.2rem;
     line-height: 1.22em;
     margin-bottom: 5px;
+
+    @include response-to(small) {
+      text-align: center;
+    }
   }
 
   &__main {
     margin-bottom: 5.33rem;
+
+    @include response-to(small) {
+      margin-bottom: 54px;
+    }
 
     &_item {
       cursor: pointer;
@@ -90,10 +121,23 @@
         box-shadow: 0 6px 24px rgba(156, 165, 169, 0.5);
       }
 
+      &-caption {
+
+        @include response-to(small) {
+          font-size: 10px;
+        }
+      }
+
       &-img {
         width: 87px;
         height: 39px;
         margin: 0 auto 1rem;
+
+        @include response-to(small) {
+          width: 85%;
+          margin-bottom: 10px;
+          height: unset;
+        }
 
         & img {
           width: 100%;
@@ -112,6 +156,10 @@
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 1.21em;
+
+    @include response-to(small) {
+      padding: 15px 0 16px;
+    }
   }
 
   &.no-image {
@@ -132,6 +180,22 @@
       font-size: 18px;
       font-weight: 700;
       line-height: 174.53%;
+    }
+
+    & .calculator__main_item-caption {
+
+      @include response-to(small) {
+        word-break: break-word;
+        font-size: 12px;
+      }
+    }
+
+    & .calculator__main_item {
+
+      @include response-to(small) {
+        padding: 10px;
+        height: unset;
+      }
     }
   }
 

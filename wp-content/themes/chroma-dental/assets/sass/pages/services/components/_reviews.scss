@@ -12,9 +12,26 @@
       order: 2;
       margin-left: 45px;
 
+      @include response-to(large) {
+        margin-left: 0;
+      }
+
+      @include response-to(small) {
+        order: 0;
+      }
+
       &:before {
         left: 65px;
         right: calc((100vw - 1137px) / -2);
+
+        @include response-to(medium) {
+          right: -25px;
+        }
+
+        @include response-to(small) {
+          right: -15px;
+          left: -15px;
+        }
       }
     }
   }
@@ -24,9 +41,22 @@
     .review__img {
       margin-right: 45px;
 
+      @include response-to(large) {
+        margin-right: 0;
+      }
+
       &:before {
         right: 65px;
         left: calc((100vw - 1137px) / -2);
+
+        @include response-to(medium) {
+          left: -25px;
+        }
+
+        @include response-to(small) {
+          right: -15px;
+          left: -15px;
+        }
       }
     }
   }
@@ -38,21 +68,44 @@
     text-align: center;
     font-size: 28px;
     line-height: 118%;
+
+    @include response-to(small) {
+      font-size: 32px;
+      line-height: 37px;
+      margin-bottom: 55px;
+    }
   }
 
   &__content {
     @include flex( $j-c: space-between );
     width: 100%;
+
+    @include response-to(small) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__text-block {
     max-width: 610px;
+
+    @include response-to(large) {
+      max-width: 60%;
+    }
+
+    @include response-to(small) {
+      max-width: 100%;
+    }
 
     &_caption {
       margin-bottom: 1.7rem;
       font-family: $roboto;
       font-size: 28px;
       line-height: 150%;
+
+      @include response-to(small) {
+        font-size: 24px;
+      }
 
       & > a {
         color: #000;
@@ -74,9 +127,19 @@
   }
 
   &__img {
-    padding: 31px 41px;
+    padding: 25px 29px;
     max-width: 450px;
     position: relative;
+
+    @include response-to(large) {
+      max-width: 38%;
+    }
+
+    @include response-to(small) {
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 50px;
+    }
 
     &:before {
       position: absolute;
