@@ -32,7 +32,7 @@ get_header();?>
             </div>
           </div>
         </div>
-        <div class="slider__item four">
+        <!--<div class="slider__item four">
           <div class="map">
             <address>595 Sheppard Ave E, North York, ON Unit #206,207 and 208</address>
             <div class="subway">
@@ -51,7 +51,7 @@ get_header();?>
               <p class="place__caption">FREE Visitor Parking Easy access to 401, DVP</p>
             </div>
           </div>
-        </div>
+        </div>-->
       </div>
       <div class="slider__offer wow animate__fadeInLeftBig" data-wow-offset="10" data-wow-duration="1s">
         <p class="slider__offer_text">Plan Your Visit Now</p>
