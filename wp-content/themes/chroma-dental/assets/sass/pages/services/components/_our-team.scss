@@ -1,24 +1,89 @@
 .our-team {
   margin-bottom: 153px;
+  background-color: rgba( color( main-color ), .05 );
+  padding-top: 83px;
+  padding-bottom: 71px;
+  position: relative;
+  display: flex;
 
-  &__wrap {
-    width: 100%;
-    @include flex( $j-c: flex-end );
+  @include response-to(small) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: unset;
+  }
+
+  &:before {
+    position: absolute;
+    left: 100%;
+    right: calc((100vw - 1137px) / -2);
+    bottom: 0;
+    top: 0;
+    content: '';
+    background-color: rgba( color( main-color ), .05 );
+
+    @include response-to(small) {
+      content: none;
+    }
   }
 
   &__photo {
     width: fit-content;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    left: 0;
+    margin-right: 60px;
+    padding: 25px 29px;
+    position: relative;
+    max-width: 390px;
+
+    @include response-to(small) {
+      max-width: 350px;
+      width: 100%;
+      margin: 58px 0;
+    }
+
+    &:before {
+      position: absolute;
+      top: -84px;
+      bottom: -72px;
+      left: -25px;
+      right: 178px;
+      background-color: #fff;
+      content: '';
+
+      @include response-to(small) {
+        top: -58px;
+        bottom: -58px;
+        background-color: rgba( color( main-color ), .05 );
+        right: calc((100vw - 350px) / -2);
+        left: 50%;
+      }
+
+      @media(max-width: 400px) {
+        right: -15px;
+      }
+    }
+
+    &_wrap {
+      width: 100%;
+    }
+
+    &_img {
+      width: 100%;
+    }
   }
 
   &__content {
     position: relative;
-    max-width: 1093px;
-    background-color: rgba( color( main-color ), .05 );
-    padding: 118px 80px 122px 273px;
+    max-width: 640px;
+    margin-top: 30px;
+
+    @include response-to(medium) {
+      max-width: 400px;
+    }
+
+    @include response-to(small) {
+      max-width: unset;
+    }
   }
 
   &__caption {
@@ -75,10 +140,12 @@
   }
 
   & .consultation-btns {
-    flex-direction: column;
 
     &__call-block {
-      margin-top: 24px;
+
+      @include response-to(medium) {
+        margin-bottom: 24px;
+      }
     }
   }
 }
