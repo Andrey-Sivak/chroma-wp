@@ -139,24 +139,22 @@ get_header();?>
     </section>
 
     <section class="six-section container">
-      <h2 class="six-section__caption">Hours of Operation</h2>
       <div class="six-section__text-wrap">
+        <img src="<?= get_template_directory_uri() . '/dist/img/home-page/schedule-icon.png' ?>" alt="img" class="six-section__img">
         <?php $schedule = get_field('schedule');
         foreach ($schedule as $schedule_item) : ?>
         <p class="six-section__text"><?= $schedule_item['days'] . ' ' . $schedule_item['from'] . 'a.m. - ' . $schedule_item['until'] . 'p.m.'; ?></p>
         <?php endforeach; ?>
       </div>
-      <h2 class="six-section__caption">Address</h2>
       <div class="six-section__text-wrap">
+        <img src="<?= get_template_directory_uri() . '/dist/img/home-page/location-icon.png' ?>" alt="img" class="six-section__img">
         <p class="six-section__text"><?php the_field('address', 'option'); ?></p>
       </div>
-      <div class="six-section__text-wrap">
-        <p class="six-section__text">Phone</p>
+      <div class="six-section__text-wrap ">
+        <img src="<?= get_template_directory_uri() . '/dist/img/home-page/phone-icon.png' ?>" alt="img" class="six-section__img">
+        <p class="six-section__caption"><?php the_field('phone', 'option'); ?></p>
       </div>
-      <div class="six-section__text-wrap">
-        <p class="six-section__text">Tel: <?php the_field('phone', 'option'); ?></p>
-      </div>
-      <a href="#" class="btn six-section__btn">Book and appointment today</a>
+      <a href="<?= get_field('external_link', 'option'); ?>" class="btn six-section__btn">Book an appointment today</a>
     </section>
 
     <div class="seven-section">
