@@ -26,13 +26,13 @@
         background-color: #fff;
         top: 0;
         right: 0;
-        max-width: 654px;
+        max-width: 385px;
         text-align: center;
         font-family: $roboto;
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 37px;
-        padding: 17px 25px 12px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 11px 25px;
 
         @include response-to(medium) {
           font-size: 18px;
@@ -41,7 +41,7 @@
         @include response-to(small) {
           background-color: unset;
           font-size: 16px;
-          max-width: 60%;
+          max-width: 80%;
           line-height: 1;
           text-align: right;
         }
@@ -50,10 +50,10 @@
       & .subway {
         position: absolute;
         text-align: center;
-        bottom: 102px;
-        left: 20px;
+        bottom: 28px;
+        left: 28px;
         font-family: $roboto;
-        font-size: 30px;
+        max-width: 265px;
 
         @include response-to(small) {
           bottom: 30px;
@@ -63,11 +63,13 @@
 
         &__caption   {
           margin-bottom: 10px;
-          line-height: 35px;
-          font-weight: 500;
+          font-size: 24px;
+          line-height: 28px;
+          font-weight: 700;
         }
 
         &__icon {
+          font-size: 30px;
           font-weight: 500;
           color: #fff;
           line-height: 1;
@@ -76,14 +78,60 @@
           border-radius: 5px;
           text-transform: uppercase;
           width: fit-content;
-          margin: 0 auto;
+          margin: 0 auto 11px;
+        }
+
+        & > span {
+          display: block;
+          margin-top: 5px;
+          text-align: center;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: capitalize;
+        }
+      }
+
+      & .location {
+        font-family: $roboto;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 130px;
+        left: 270px;
+
+        @include response-to(small) {
+          top: 40px;
+          left: 20px;
+        }
+
+        & > img {
+          width: 37px;
+          height: 50px;
+
+          @include response-to(small) {
+            width: 19px;
+            height: 28px;
+          }
+        }
+
+        & > p {
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 28px;
+          margin-right: 25px;
+
+          @include response-to(small) {
+            font-size: 18px;
+            line-height: 1;
+            margin-right: 20px;
+          }
         }
       }
     }
 
     .places {
       flex-basis: 25%;
-      min-width: 397px;
+      min-width: 309px;
       display: flex;
       flex-direction: column;
 

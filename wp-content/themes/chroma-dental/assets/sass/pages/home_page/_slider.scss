@@ -8,6 +8,10 @@
   position: relative;
   height: 600px;
 
+  @include response-to(small) {
+    height: 726px;
+  }
+
   &__item {
     height: 600px;
     position: relative;
@@ -60,6 +64,25 @@
       }
     }
 
+    &_phone {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 17px;
+      text-align: center;
+      vertical-align: center;
+
+      & a {
+        color: color(main-color);
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        @include on-event {
+          text-decoration: underline;
+        }
+      }
+    }
+
     &_btn {
       width: 100%;
       padding: 24px 0;
@@ -84,7 +107,7 @@
     bottom: 1rem;
 
     @include response-to(medium) {
-      bottom: 110px;
+      bottom: 140px;
     }
   }
 

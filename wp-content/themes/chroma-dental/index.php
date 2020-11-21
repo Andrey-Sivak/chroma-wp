@@ -25,19 +25,22 @@ get_header();?>
         <div class="slider__item third">
           <div class="container">
             <div class="slider__item_content">
-              <h2 class="slider__item_caption">Transform your smile with Invisalign® for 125 $ a month</h2>
-              <p class="slider__item_text">How does Invisalign® treatment work?</p>
+              <h2 class="slider__item_caption">Transform your smile with Invisible Braces for 199 $ a month <br>How does Invisible Braces treatment work?</h2>
               <p class="slider__item_text">3 easy steps can put you on the path to your brand-new smile.</p>
-              <a href="#" class="btn slider__item_btn">Book an appointment today</a>
             </div>
           </div>
         </div>
-        <!--<div class="slider__item four">
+        <div class="slider__item four">
           <div class="map">
             <address>595 Sheppard Ave E, North York, ON Unit #206,207 and 208</address>
             <div class="subway">
-              <p class="subway__caption">Bayview subway station</p>
               <p class="subway__icon">m</p>
+              <p class="subway__caption">Bayview subway station</p>
+              <span>(Steps from the new Bayview Subway Station)</span>
+            </div>
+            <div class="location">
+              <p>Bayview Village <br>Shopping Center</p>
+              <img src="<?= get_template_directory_uri() . '/dist/img/home-page/slider/location.png'; ?>" alt="img">
             </div>
           </div>
           <div class="places">
@@ -51,7 +54,7 @@ get_header();?>
               <p class="place__caption">FREE Visitor Parking Easy access to 401, DVP</p>
             </div>
           </div>
-        </div>-->
+        </div>
       </div>
       <div class="slider__offer wow animate__fadeInLeftBig" data-wow-offset="10" data-wow-duration="1s">
         <p class="slider__offer_text">Plan Your Visit Now</p>
