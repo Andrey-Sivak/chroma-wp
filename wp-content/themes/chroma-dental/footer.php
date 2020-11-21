@@ -19,9 +19,9 @@
           <img src="<?php the_field('footer_logo', 'option'); ?>" alt="chroma dental" class="footer__header_logo-img">
         </figure>
       </a>
-      <a href="/" class="footer__header_link">home</a>
-      <a href="about.html" class="footer__header_link">about us</a>
-      <a href="contacts.html" class="footer__header_link">contact us</a>
+      <a href="<?= get_home_url(); ?>" class="footer__header_link">home</a>
+      <a href="<?= esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>" class="footer__header_link">about us</a>
+      <a href="<?= esc_url( get_permalink( get_page_by_title( 'Contact us' ) ) ); ?>" class="footer__header_link">contact us</a>
     </div>
     <div class="footer__main">
       <address class="footer__address">
@@ -55,6 +55,7 @@
       <?php while( have_rows('footer_links', 'option') ): the_row(); ?>
         <a href="<?php the_sub_field('link') ?>" class="footer__links_link"><?php the_sub_field('link_text') ?></a>
       <?php endwhile; ?>
+      <a href="<?= get_home_url() . '/wp-sitemap.xml' ?>" class="footer__links_link">Sitemap XML</a>
     </div>
   </div>
   <?php endif; ?>
