@@ -24,19 +24,19 @@ get_header();?>
 				<h2 class="description-block__caption"><?= $contact_page_text_block['caption']; ?></h2>
 				<p class="description-block__text"><?= $contact_page_text_block['text']; ?></p>
         <?php get_template_part('template-parts/components/order-free-consultation'); ?>
-          <?php $services_pages_query = new WP_Query();
+          <?php
+          $services_parent_page = get_page_by_title('Services');
+          $services_pages_query = new WP_Query();
           $all_wp_pages = $services_pages_query->query([
             'post_type' => 'page',
             'posts_per_page' => -1,
+            'post_parent' => $services_parent_page->ID,
           ]);
 
-        $services_parent_page = get_page_by_title('Services');
-        $services_children = get_page_children($services_parent_page->ID, $all_wp_pages);
-
-        if($services_children) : ?>
+        if($all_wp_pages) : ?>
 				<ul class="description-block__services">
 					<li class="description-block__services_caption">Our Services</li>
-	        <?php foreach($services_children as $services_child) : ?>
+	        <?php foreach($all_wp_pages as $services_child) : ?>
             <li class="description-block__services_item">
               <figure>
                 <img src="<?= get_the_post_thumbnail_url($services_child->ID, 'thumbnail'); ?>" alt="icon">

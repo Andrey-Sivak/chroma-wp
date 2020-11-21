@@ -28,20 +28,20 @@
         <p><?php the_field('address', 'option'); ?></p>
         <p>Tel: <?php the_field('phone', 'option'); ?></p>
       </address>
-	    <?php $services_pages_query = new WP_Query();
+	    <?php
+      $services_parent_page = get_page_by_title('Services');
+      $services_pages_query = new WP_Query();
 	    $all_wp_pages = $services_pages_query->query([
 		    'post_type' => 'page',
 	      'posts_per_page' => -1,
+	      'post_parent' => $services_parent_page->ID,
 	    ]);
 
-	    $services_parent_page = get_page_by_title('Services');
-	    $services_children = get_page_children($services_parent_page->ID, $all_wp_pages);
-
-	    if($services_children) : ?>
+	    if($all_wp_pages) : ?>
       <div class="footer__services">
         <p class="footer__services_caption">services:</p>
         <div class="footer__services_wrap">
-	        <?php foreach($services_children as $services_child) : ?>
+	        <?php foreach($all_wp_pages as $services_child) : ?>
           <a href="<?= $services_child->guid; ?>" class="footer__services_item"><?= $services_child->post_title; ?></a>
           <?php endforeach; ?>
         </div>
