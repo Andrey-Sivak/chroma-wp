@@ -20,6 +20,15 @@ class Menu {
         this.menuItems.forEach( item => item.classList.toggle( this.activeClass ) );
     }
 
+    subMenu() {
+        const subMenu = this.menu.querySelector('.sub-menu');
+        const btnSubMenu = this.menu.querySelector('.menu-item-object-custom');
+
+        btnSubMenu.addEventListener('click', function (e) {
+            subMenu.classList.toggle('active');
+        })
+    }
+
     listener() {
         this.btn.addEventListener('click', this.toggleMenu);
     }
@@ -30,6 +39,7 @@ class Menu {
         }
 
         this.listener();
+        this.subMenu();
     }
 }
 

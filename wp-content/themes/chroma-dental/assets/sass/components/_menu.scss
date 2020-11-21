@@ -103,9 +103,23 @@
   }
 
   &:hover .sub-menu {
-    transform: translateX(0);
-    max-height: 1000px;
-    opacity: 1;
+
+    @media(min-width: 760px) {
+      transform: translateX(0);
+      max-height: 1000px;
+      opacity: 1;
+      border: 1px solid #000;
+    }
+  }
+
+  & .sub-menu.active {
+
+    @include response-to(small) {
+      transform: translateX(0);
+      max-height: 1000px;
+      opacity: 1;
+      border: none;
+    }
   }
 
   & .sub-menu {
@@ -134,9 +148,10 @@
       background-color: color( main-color );
       @include transition-ease;
       display: block;
+      background-color: #fff;
 
       @include on-event {
-        background-color: lighten( color( main-color ), 5% );
+        background-color: lighten( #fff, 5% );
       }
 
       &:not(:last-child) {
