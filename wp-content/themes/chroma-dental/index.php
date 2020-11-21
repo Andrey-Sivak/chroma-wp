@@ -126,12 +126,18 @@ get_header();?>
     <section class="five-section">
       <div class="container">
         <h2 class="five-section__caption"><?= $image_block['caption']; ?></h2>
-        <?php get_template_part('template-parts/components/sale-block'); ?>
-        <div class="five-section__wrap-img">
-          <span class="five-section__circle"></span>
-          <p class="five-section__img-text">slide and see</p>
-          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img.png'; ?>" alt="img" class="five-section__img">
-          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-mob.jpg'; ?>" alt="img" class="five-section__img mob">
+        <div class="beer-slider" id="beer-slider" data-beer-label="before">
+          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-before.jpg'; ?>" alt="img" class="five-section__img">
+          <div class="beer-reveal" data-beer-label="after">
+            <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img.png'; ?>" alt="img" class="five-section__img">
+          </div>
+        </div>
+
+        <div class="beer-slider" id="beer-slider-mob" data-beer-label="before">
+          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-before-mob.jpg'; ?>" alt="img" class="five-section__img mob">
+          <div class="beer-reveal" data-beer-label="after">
+            <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-mob.jpg'; ?>" alt="img" class="five-section__img mob">
+          </div>
         </div>
 	      <?php get_template_part('template-parts/components/order-free-consultation'); ?>
       </div>
@@ -163,4 +169,9 @@ get_header();?>
 	</main><!-- #main -->
 
 <?php endwhile; wp_reset_query(); ?>
-<?php get_footer();
+<?php get_footer();?>
+<script src=" <?= get_template_directory_uri() . '/dist/libs/BeerSlider.js'; ?>"></script>
+<script>
+    new BeerSlider(document.getElementById('beer-slider'));
+    new BeerSlider(document.getElementById('beer-slider-mob'));
+</script>
