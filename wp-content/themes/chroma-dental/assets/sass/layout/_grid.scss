@@ -13,7 +13,8 @@
 }
 
 main {
-  padding-top: 96px;
+  padding-top: 65px;
+  position: relative;
 
   @include response-to(medium) {
     padding-top: 65px;
