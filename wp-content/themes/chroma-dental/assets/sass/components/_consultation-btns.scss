@@ -30,17 +30,22 @@
     background-color: rgba( color( main-color ), .05 );
     max-width: 245px;
     width: 100%;
-    padding: 8px 13px;
-    font-size: .8rem;
-    line-height: 1.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0 12px;
 
-    &_caption {
+    & p {
       font-weight: 600;
-      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 15px;
     }
     
     & a {
-      color: #024DBD;
+      color: color(main-color);
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
       @include on-event {
         text-decoration: underline;
       }
