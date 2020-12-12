@@ -1,6 +1,6 @@
 .third-section {
   padding-top: 52px;
-  padding-bottom: 117px;
+  padding-bottom: 65px;
   position: relative;
 
   @include response-to(medium) {
@@ -75,7 +75,7 @@
       margin-bottom: 1.5rem;
 
       @include response-to(medium) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
   }

@@ -6,7 +6,8 @@ function Calculator(calculatorID) {
 
     let data = {
         age: null,
-        problem: null
+        problem: null,
+        page: null,
     };
 
     const calculatorItems = [...document.querySelectorAll( '.calculator__main_item' )];
@@ -129,10 +130,13 @@ function Calculator(calculatorID) {
     }
 
     function sendData( btn, arr ) {
+        const form = calculator.querySelector('form');
+
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             data.age = null;
             data.problem = null;
+            data.page = null;
 
             collectData(arr);
 
@@ -140,6 +144,7 @@ function Calculator(calculatorID) {
                 const link = btn.getAttribute('href');
                 localStorage.setItem('age', data.age);
                 localStorage.setItem('problem', data.problem);
+
                 window.location.href = link;
             }
         })

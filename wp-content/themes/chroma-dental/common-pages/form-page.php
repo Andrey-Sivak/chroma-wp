@@ -2,15 +2,29 @@
 /*
  Template Name: Form
  */
-get_header();?>
+get_header();
+
+$previous_page = $_SESSION['page'];
+$result_link = get_permalink( $previous_page ) . 'result';
+?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 <main id="primary" class="site-main form-page">
-  <?php  ?>
 
 	<h1 class="form-page__caption">We’v got your result, introduce yourself!</h1>
-	<form action="#" class="form-page__form" id="form-page__form">
+	<form action="<?= get_template_directory_uri() . '/mail.php'; ?>"
+        method="post"
+        class="form-page__form"
+        id="form-page__form">
+
+    <div class="form-page__form_formgroup hidden">
+      <label for="mail"></label>
+      <input type="hidden"
+             name="mail"
+             id="mail"
+             value="<?= get_field('email_for_feedback', 'option') ?>">
+    </div>
 
     <div class="form-page__form_formgroup hidden">
       <label for="age"></label>
@@ -19,6 +33,15 @@ get_header();?>
              id="age"
              value="">
     </div>
+
+    <div class="form-page__form_formgroup hidden">
+      <label for="page"></label>
+      <input type="hidden"
+             name="page"
+             id="page"
+             value="<?= get_permalink( $previous_page ); ?>">
+    </div>
+
     <div class="form-page__form_formgroup hidden">
       <label for="problem"></label>
       <input type="hidden"
@@ -61,7 +84,7 @@ get_header();?>
 				<span class="text">Your personal data will be processed in accordance with our <a href="#">Privace Statement</a></span>
 			</label>
 		</div>
-		<button type="submit" class="form-page__form_btn" id="form-page__form_btn">Get your results</button>
+		<input type="submit" class="form-page__form_btn" id="form-page__form_btn" data-link="<?= $result_link; ?>" value="Get your results">
 	</form>
 
 </main>

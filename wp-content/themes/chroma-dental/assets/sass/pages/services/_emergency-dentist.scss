@@ -1,10 +1,10 @@
 .emergency {
 
   & .second-section {
-    margin-top: -96px;
+    margin-top: -65px;
     font-family: $roboto;
     width: 100%;
-    padding-top: 98px;
+    padding-top: 66px;
     padding-bottom: 68px;
     @include flex( $direction: column, $a-i: center );
     background-size: cover;
@@ -98,6 +98,13 @@
           width: 100%;
           max-width: 400px;
         }
+
+        & .warning {
+          color: red;
+          font-size: 14px;
+          margin-left: calc(100% - 365px);
+          margin-top: 5px;
+        }
       }
 
       &_label {
@@ -144,6 +151,14 @@
               font-weight: inherit;
             }
           }
+
+          & .warning {
+            position: absolute;
+            top: 70px;
+            width: 200px;
+            margin-top: 0;
+            margin-left: 0;
+          }
         }
       }
 
@@ -154,6 +169,10 @@
         padding: 14px 29px;
         display: block;
         width: 100%;
+
+        &.warn {
+          box-shadow: 0 2px 2px rgba(255, 0, 0, 0.3);
+        }
 
         &::placeholder {
           color: #CDD4D6;
@@ -174,6 +193,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
+          }
+
+          &.warn + .second-section__form_input.checkbox {
+            box-shadow: 0 2px 2px rgba(255, 0, 0, 0.3);
           }
         }
 

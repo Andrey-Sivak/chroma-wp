@@ -19,7 +19,7 @@ get_header();?>
 		<section class="container second-section">
 			<div class="description-block">
 		    <?php $contact_page_caption_block = get_field('caption_block'); ?>
-        <h2 class="second-section__main-caption"><?= $contact_page_caption_block['caption']; ?></h2>
+        <h2 class="second-section__main-caption pc"><?= $contact_page_caption_block['caption']; ?></h2>
 		    <?php $contact_page_text_block = get_field('text_block'); ?>
 				<h2 class="description-block__caption"><?= $contact_page_text_block['caption']; ?></h2>
 				<p class="description-block__text"><?= $contact_page_text_block['text']; ?></p>
@@ -49,6 +49,8 @@ get_header();?>
         <?php endif; ?>
 			</div>
 			<div class="info-block">
+		    <?php $contact_page_caption_block = get_field('caption_block'); ?>
+        <h2 class="second-section__main-caption mob"><?= $contact_page_caption_block['caption']; ?></h2>
 				<address class="info-block__caption">ADDRESS: <?php the_field('address', 'option'); ?></address>
 				<address class="info-block__numbers">
 					<p class="info-block__numbers_number">Call: <a href="tel:<?php the_field('phone', 'option'); ?>"><?php the_field('phone', 'option'); ?></a></p>
@@ -89,12 +91,41 @@ get_header();?>
 			</div>
 		</section>
 
+    <?php $partners = get_field('partners');
+    if( !empty( $partners ) ) : ?>
+    <section class="partners container">
+      <div class="partners__wrap">
+	      <?php foreach ( $partners as $partner ) : ?>
+            <figure class="partners__image">
+              <img src="<?= $partner['image']; ?>" alt="img">
+            </figure>
+	      <?php endforeach; ?>
+      </div>
+    </section>
+    <?php endif; ?>
+
 		<section class="form-section">
       <div class="container">
         <div class="form-section__wrap">
           <h2 class="form-section__caption">Contact Us</h2>
           <p class="form-section__note">Make sure you fill in all required fields.</p>
-          <form action="#" class="form">
+          <form class="form" action="<?= get_template_directory_uri() . '/mail.php'; ?>">
+            <div class="form-page__form_formgroup hidden">
+              <label for="mail"></label>
+              <input type="hidden"
+                     name="mail"
+                     id="mail"
+                     value="<?= get_field('email_for_feedback', 'option') ?>">
+            </div>
+
+            <div class="form-page__form_formgroup hidden">
+              <label for="page"></label>
+              <input type="hidden"
+                     name="page"
+                     id="page"
+                     value="<?= get_permalink( get_the_ID() ); ?>">
+            </div>
+
             <label for="name" class="form__label">
               First Name*
               <input type="text"
@@ -120,7 +151,7 @@ get_header();?>
               Message
               <textarea name="message" id="message" class="form__input"> </textarea>
             </label>
-            <button class="btn form__btn" type="submit">submit</button>
+            <button class="btn form__btn" id="contacts__form_btn" type="submit">submit</button>
           </form>
         </div>
       </div>
@@ -131,4 +162,5 @@ get_header();?>
 
 
 <?php endwhile; wp_reset_query(); ?>
-<?php get_footer();
+<?php get_footer(); ?>
+<script src="https://unpkg.com/imask"></script>

@@ -25,8 +25,10 @@ get_header();?>
         <div class="slider__item third">
           <div class="container">
             <div class="slider__item_content">
-              <h2 class="slider__item_caption">Transform your smile with Invisible Braces for 199 $ a month <br>How does Invisible Braces treatment work?</h2>
+              <h2 class="slider__item_caption">Transform your smile with Invisible Braces for 199 $ a month</h2>
+              <p class="slider__item_text">How does invisible bracelets treatment work?</p>
               <p class="slider__item_text">3 easy steps can put you on the path to your brand-new smile.</p>
+              <a href="<?= esc_url( get_permalink( get_page_by_title( 'Dental Bonding' ) ) ); ?>" class="btn slider__item_btn">see more</a>
             </div>
           </div>
         </div>
@@ -55,10 +57,17 @@ get_header();?>
             </div>
           </div>
         </div>
+        <div class="slider__item five">
+          <div class="container">
+            <h2 class="slider__item_caption">Our children smile in the same language</h2>
+            <a href="<?= esc_url( get_permalink( get_page_by_title( 'Children`s Dentistry' ) ) ); ?>" class="btn slider__item_btn">see more</a>
+          </div>
+        </div>
       </div>
-      <div class="slider__offer wow animate__fadeInLeftBig" data-wow-offset="10" data-wow-duration="1s">
+      <div class="slider__offer wow animate__fadeInRightBig" data-wow-offset="10" data-wow-duration="1s">
         <p class="slider__offer_text">Plan Your Visit Now</p>
-        <a href="#" class="btn slider__offer_btn">book an appointment</a>
+        <a href="<?= get_field('external_link', 'option'); ?>" class="btn slider__offer_btn">book an appointment</a>
+        <p class="slider__offer_phone">Call us: &nbsp;&nbsp;&nbsp;<a href="tel:<?= get_field('phone', 'option') ?>"><?= get_field('phone', 'option') ?></a></p>
       </div>
       <div class="slider__dots"></div>
     </section>
@@ -109,7 +118,7 @@ get_header();?>
 
                     <div class="four-section__list_item">
                       <figure class="four-section__list_item-img-wrap">
-                        <img src="<?= get_the_post_thumbnail_url($services_child->ID, 'thumbnail'); ?>" alt="icon" class="four-section__list_item-img">
+                        <img src="<?= get_the_post_thumbnail_url($services_child->ID, 'thumbnail'); ?>" type="image/png" alt="icon" class="four-section__list_item-img">
                       </figure>
                       <a href="<?= $services_child->guid; ?>" class="four-section__list_item-text"><?= $services_child->post_title; ?></a>
                     </div>
@@ -123,25 +132,47 @@ get_header();?>
     <?php endif; ?>
 
     <?php $image_block = get_field('image_block'); ?>
-    <section class="five-section">
+
+    <section class="five-section"></section>
+
+    <script>
+        const fiveSectionContent = `
       <div class="container">
+
         <h2 class="five-section__caption"><?= $image_block['caption']; ?></h2>
         <div class="beer-slider" id="beer-slider" data-beer-label="before">
-          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-before.jpg'; ?>" alt="img" class="five-section__img">
+          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-before.jpg'; ?>" alt="img" class="five-section__img beer-slider__img">
           <div class="beer-reveal" data-beer-label="after">
-            <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img.png'; ?>" alt="img" class="five-section__img">
+            <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img.png'; ?>" alt="img" class="five-section__img beer-slider__img">
           </div>
         </div>
 
         <div class="beer-slider" id="beer-slider-mob" data-beer-label="before">
-          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-before-mob.jpg'; ?>" alt="img" class="five-section__img mob">
+          <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-before-mob.jpg'; ?>" alt="img" class="five-section__img mob beer-slider__img">
           <div class="beer-reveal" data-beer-label="after">
-            <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-mob.jpg'; ?>" alt="img" class="five-section__img mob">
+            <img src="<?= get_template_directory_uri() . '/dist/img/home-page/five-section-img-mob.jpg'; ?>" alt="img" class="five-section__img mob beer-slider__img">
           </div>
         </div>
-	      <?php get_template_part('template-parts/components/order-free-consultation'); ?>
-      </div>
-    </section>
+\t      <?php get_template_part( 'template-parts/components/order-free-consultation' ); ?>
+      </div>`;
+        const fiveSectionWrap = document.querySelector('.five-section');
+
+        let scrollCheckFiveSec = true;
+        window.addEventListener('scroll', function (e) {
+            let scroll = document.documentElement.scrollTop;
+            if( scrollCheckFiveSec ) {
+                if( scroll >= 1000 ) {
+                    fiveSectionWrap.insertAdjacentHTML('afterbegin', fiveSectionContent );
+
+                    setTimeout(function () {
+                        new BeerSlider(document.getElementById('beer-slider'));
+                        new BeerSlider(document.getElementById('beer-slider-mob'));
+                    } ,500);
+                    scrollCheckFiveSec = false;
+                }
+            }
+        })
+    </script>
 
     <section class="six-section container">
       <div class="six-section__text-wrap">
@@ -157,21 +188,15 @@ get_header();?>
       </div>
       <div class="six-section__text-wrap ">
         <img src="<?= get_template_directory_uri() . '/dist/img/home-page/phone-icon.png' ?>" alt="img" class="six-section__img">
-        <p class="six-section__caption"><?php the_field('phone', 'option'); ?></p>
+        <a href="tel:<?php the_field('phone', 'option'); ?>" class="six-section__caption" style="color: #000"><?php the_field('phone', 'option'); ?></a>
       </div>
       <a href="<?= get_field('external_link', 'option'); ?>" class="btn six-section__btn">Book an appointment today</a>
     </section>
 
-    <div class="seven-section">
-      <iframe class="seven-section__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.2656754737127!2d-79.38591397100674!3d43.76734362994252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2d4c7f5fd9bb%3A0x1769d2f59ba6dcfc!2s595%20Sheppard%20Ave%20E%2C%20North%20York%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1602691137167!5m2!1sen!2s" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
+    <div class="seven-section"></div>
 
 	</main><!-- #main -->
 
 <?php endwhile; wp_reset_query(); ?>
 <?php get_footer();?>
 <script src=" <?= get_template_directory_uri() . '/dist/libs/BeerSlider.js'; ?>"></script>
-<script>
-    new BeerSlider(document.getElementById('beer-slider'));
-    new BeerSlider(document.getElementById('beer-slider-mob'));
-</script>

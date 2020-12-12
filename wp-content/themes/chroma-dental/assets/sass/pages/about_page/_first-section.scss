@@ -24,11 +24,10 @@
 
   & .container {
     width: 100%;
-    @include flex($j-c:space-between);
+    @include flex($j-c:space-between, $a-i:center);
   }
 
   &__text-content {
-    margin-top: 47px;
     max-width: 456px;
 
     @include response-to(medium) {
@@ -51,19 +50,15 @@
     }
 
     &_text {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5em;
-
-      @include response-to(medium) {
-        font-size: 16px;
-      }
     }
   }
 
   &__photo {
     padding: 25px 29px;
     margin-right: 194px;
-    max-width: 35%;
+    max-width: 350px;
     width: auto;
 
     @include response-to(large) {

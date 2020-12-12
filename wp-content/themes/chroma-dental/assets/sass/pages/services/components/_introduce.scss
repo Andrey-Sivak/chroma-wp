@@ -1,6 +1,6 @@
 .introduce {
   margin-top: 11px;
-  margin-bottom: 106px;
+  margin-bottom: 65px;
   font-family: $roboto;
 
   &__caption {
@@ -25,22 +25,34 @@
 
   &__img {
     margin-top: 28px;
-    margin-right: 4rem;
+    margin-right: 81px;
     width: fit-content;
-    padding: 31px 41px;
+    padding: 25px 29px;
+    max-width: 400px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: -22px;
+      bottom: -22px;
+      right: -32px;
+      left: calc((100vw - 1135px) / -2);
+      background-color: rgba(color(main-color), .05);
+      content: '';
+    }
 
     @include response-to(small) {
       margin: 0 0 44px;
+      right: 0;
     }
   }
 
   &__photo_wrap {
 
     & > img {
-      max-height: 412px;
       max-width: 430px;
       height: auto;
-      width: auto;
+      width: 100%;
 
       @include response-to(medium) {
         max-width: 220px;

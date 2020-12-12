@@ -1,5 +1,5 @@
 .form-page {
-  padding: 160px 0 100px;
+  padding: 65px 0 100px;
 
   &__caption {
     margin: 0 auto 40px;
@@ -9,6 +9,12 @@
     font-weight: 500;
     text-align: center;
     max-width: 1280px;
+
+    @include response-to(small) {
+      margin-bottom: 32px;
+      font-size: 40px;
+      line-height: 47px;
+    }
   }
 
   &__form {
@@ -37,6 +43,21 @@
         max-width: 368px;
         justify-content: flex-start;
         margin-right: calc((100% - 570px) / 2);
+
+        @include response-to(small) {
+          max-width: 300px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 25px;
+        }
+      }
+
+      @include response-to(small) {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto 15px;
       }
 
       & .warning {
@@ -58,12 +79,24 @@
       cursor: pointer;
       user-select: none;
 
+      @include response-to(small) {
+        margin-bottom: 15px;
+      }
+
       &.checkbox {
         position: relative;
         transform: unset;
         width: fit-content;
         top: unset;
         left: unset;
+
+        & .warning {
+          position: absolute;
+          top: 40px;
+          width: 200px;
+          margin-top: 0;
+          margin-left: 0;
+        }
 
         & .req {
           position: absolute;
@@ -82,6 +115,10 @@
           width: 316px;
           font-size: 10px;
           font-weight: 500;
+
+          @include response-to(small) {
+            width: 200px;
+          }
 
           & a {
             display: block;
@@ -103,6 +140,11 @@
 
       @include on-event {
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      @include response-to(small) {
+        width: 100%;
+        max-width: 350px;
       }
 
       &.warn {
@@ -128,6 +170,10 @@
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
+        }
+
+        &.warn + .form-page__form_input.checkbox {
+          box-shadow: 0 2px 2px rgba(255, 0, 0, 0.3);
         }
       }
 

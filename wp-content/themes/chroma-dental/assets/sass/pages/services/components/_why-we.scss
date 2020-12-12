@@ -1,5 +1,5 @@
 .why-we {
-  margin: 100px auto 110px;
+  margin: 96px auto 41px;
   text-align: center;
 
   @include response-to(small) {
@@ -141,11 +141,18 @@
   & .consultation-btns {
     margin-left: auto;
     margin-right: auto;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    @include response-to(small) {
+      flex-direction: column;
+    }
 
     &__call-block {
-      margin-top: 24px;
+
+      @include response-to(small) {
+        margin-top: 24px;
+      }
     }
   }
 }

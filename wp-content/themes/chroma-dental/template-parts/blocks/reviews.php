@@ -28,9 +28,13 @@ if ( !empty($reviews) ) : ?>
             </div>
           </div>
           <div class="review__text-block">
-	          <?php if ($review['service']) :?>
-            <?php $service_ID = url_to_postid( $review['service'] ); ?>
-            <p class="review__text-block_caption"><a href="<?= $review['service']; ?>"><?= get_the_title( $service_ID ); ?></a> Downtown Toronto | Liberty Village Dentistry</p>
+	          <?php if ( $review['service'] || $review['sub_caption'] ) :?>
+            <p class="review__text-block_caption">
+              <?php if( $review['service'] ) : ?>
+                <?php $service_ID = url_to_postid( $review['service'] ); ?>
+                <a href="<?= $review['service']; ?>"><?= get_the_title( $service_ID ); ?></a>
+              <?php endif; ?>
+              <?php if( $review['sub_caption'] ) { echo $review['sub_caption']; } ?></p>
             <?php endif; ?>
             <p class="review__text"><?= $review['text']; ?></p>
             <?php get_template_part('template-parts/components/order-free-consultation'); ?>

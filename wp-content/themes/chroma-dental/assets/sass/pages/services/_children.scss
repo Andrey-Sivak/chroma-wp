@@ -1,0 +1,55 @@
+.children-page {
+
+  & .first-section {
+    height: 80vh;
+    margin-top: -65px;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../img/services/children-page-bg.png");
+    font-family: $roboto;
+    @include flex-center();
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+    @include response-to(small) {
+      height: 60vh;
+      background-image: url("../../../img/services/children-page-bg-mob.png");
+      justify-content: flex-start;
+      padding-top: 35px;
+    }
+
+    &__caption {
+      margin: 0 auto 15px;
+      width: fit-content;
+      text-transform: uppercase;
+      //background: rgba(0, 0, 0, 0.15);
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      font-size: 64px;
+      font-weight: 700;
+
+      @include response-to(small) {
+        font-size: 32px;
+      }
+    }
+
+    &__subcaption {
+      //background: rgba(0, 0, 0, 0.15);
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1;
+      margin: 0 auto;
+      width: fit-content;
+
+      @include response-to(small) {
+        font-size: 24px;
+      }
+    }
+  }
+}

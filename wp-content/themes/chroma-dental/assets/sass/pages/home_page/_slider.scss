@@ -2,6 +2,7 @@
 @import 'slider/second-slide';
 @import 'slider/third-slide';
 @import 'slider/four-slide';
+@import 'slider/five-slide';
 
 .slider {
   width: 100%;
@@ -9,7 +10,15 @@
   height: 600px;
 
   @include response-to(small) {
-    height: 726px;
+    height: 565px;
+  }
+
+  & .owl-item.active > &__item {
+    display: block;
+  }
+
+  & .owl-item.active > &__item.four {
+    display: flex;
   }
 
   &__item {
@@ -18,9 +27,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: none;
 
     @include response-to(small) {
-      height: 726px;
+      height: 565px;
     }
   }
 

@@ -1,12 +1,16 @@
 .home {
 
   & .covid {
-    padding-top: 2.6rem;
-    padding-bottom: 2.1rem;
+    padding: 55px 0;
     background-image: url("../../../img/home-page/sec-section-bg.png");
 
     &__caption {
       font-weight: 400;
+      font-size: 28px;
+    }
+
+    &__content {
+      margin-top: 55px;
     }
 
     &__subcaption {

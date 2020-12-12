@@ -1,3 +1,7 @@
+<?php
+$result_link = get_permalink( get_the_ID() ) . 'result';
+?>
+
 <div class="emergency">
 
 	<section class="second-section">
@@ -6,20 +10,38 @@
 		<p class="second-section__subcaption">Immediate Appointment </p>
 		<span class="second-section__call">CALL: <a href="tel:324-234-4545">(324) 234-4545</a></span>
 
-		<form action="#" class="second-section__form">
+		<form action="<?= get_template_directory_uri() . '/mail.php'; ?>" method="post" class="second-section__form">
 			<p class="second-section__form_head">Or submit your personal details and we will Immediately contact you</p>
+      <div class="form-page__form_formgroup hidden">
+        <label for="mail"></label>
+        <input type="hidden"
+               name="mail"
+               id="mail"
+               value="<?= get_field('email_for_feedback', 'option') ?>">
+      </div>
+
+      <div class="form-page__form_formgroup hidden">
+        <label for="page"></label>
+        <input type="hidden"
+               name="page"
+               id="page"
+               value="<?= get_permalink( get_the_ID() ); ?>">
+      </div>
+
 			<div class="second-section__form_formgroup">
-				<label for="f-name" class="second-section__form_label">First Name*</label>
+				<label for="first-name" class="second-section__form_label">First Name*</label>
 				<input type="text"
 				       class="second-section__form_input"
-				       id="f-name"
+				       id="first-name"
+               name="first-name"
 				       placeholder="First Name*">
 			</div>
 			<div class="second-section__form_formgroup">
-				<label for="l-name" class="second-section__form_label">Last Name*</label>
+				<label for="last-name" class="second-section__form_label">Last Name*</label>
 				<input type="text"
 				       class="second-section__form_input"
-				       id="l-name"
+				       id="last-name"
+               name="last-name"
 				       placeholder="Last Name*">
 			</div>
 			<div class="second-section__form_formgroup">
@@ -27,6 +49,7 @@
 				<input type="text"
 				       class="second-section__form_input"
 				       id="phone"
+               name="phone"
 				       placeholder="Phone*">
 			</div>
 			<div class="second-section__form_formgroup">
@@ -39,7 +62,7 @@
 					<span class="text">Your personal data will be processed in accordance with our <a href="#">Privace Statement</a></span>
 				</label>
 			</div>
-			<button class="second-section__form_btn" type="submit">submit</button>
+			<button class="second-section__form_btn" type="submit" id="emergency__form_btn" data-link="<?= $result_link; ?>">submit</button>
 		</form>
 	</section>
 

@@ -16,9 +16,11 @@
       height: 100%;
 
       @include response-to(small) {
-        order: 2;
         flex-basis: unset;
         width: 100%;
+        background-size: 130%;
+        background-position: -10px 270px;
+        height: 215px;
       }
 
       & > address {
@@ -41,7 +43,7 @@
         @include response-to(small) {
           background-color: unset;
           font-size: 16px;
-          max-width: 80%;
+          max-width: 95%;
           line-height: 1;
           text-align: right;
         }
@@ -56,9 +58,11 @@
         max-width: 265px;
 
         @include response-to(small) {
-          bottom: 30px;
+          bottom: 3px;
           left: 50px;
           font-size: 16px;
+          display: flex;
+          align-items: center;
         }
 
         &__caption   {
@@ -66,6 +70,11 @@
           font-size: 24px;
           line-height: 28px;
           font-weight: 700;
+
+          @include response-to(small) {
+            font-size: 16px;
+            margin-bottom: 0;
+          }
         }
 
         &__icon {
@@ -79,6 +88,12 @@
           text-transform: uppercase;
           width: fit-content;
           margin: 0 auto 11px;
+
+          @include response-to(small) {
+            margin-right: 10px;
+            font-size: 14px;
+            margin-bottom: 0;
+          }
         }
 
         & > span {
@@ -88,6 +103,10 @@
           font-size: 14px;
           line-height: 17px;
           text-transform: capitalize;
+
+          @include response-to(small) {
+            display: none;
+          }
         }
       }
 
@@ -100,7 +119,7 @@
         left: 270px;
 
         @include response-to(small) {
-          top: 40px;
+          top: 60px;
           left: 20px;
         }
 
@@ -153,23 +172,31 @@
         padding: 14px 20px;
 
         @include response-to(small) {
-          height: 246px;
           flex: unset;
         }
 
         &:first-of-type {
           background-image: url("../../../../img/home-page/slider/1.jpg");
+          @include response-to(small) {
+            display: none;
+          }
         }
 
         &:nth-of-type(2) {
           background-image: url("../../../../img/home-page/slider/2.jpg");
+
+          @include response-to(small) {
+            height: 228px;
+            order: 2;
+          }
         }
 
         &:last-of-type {
           background-image: url("../../../../img/home-page/slider/3.jpg");
 
           @include response-to(small) {
-            display: none;
+            order: 1;
+            height: 122px;
           }
         }
 
@@ -180,6 +207,11 @@
           font-weight: 800;
           font-size: 24px;
           line-height: 29px;
+
+          @include response-to(small) {
+            font-size: 18px;
+            line-height: 132.7%;
+          }
         }
       }
     }

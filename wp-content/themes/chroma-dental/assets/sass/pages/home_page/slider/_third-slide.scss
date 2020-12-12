@@ -1,62 +1,63 @@
 .slider__item {
 
   &.third {
-    color: #fff;
+    color: #000;
     background-image: url("../../../../img/home-page/slider/third-slide.jpg");
+
+    @include response-to(small) {
+      background-image: url("../../../../img/home-page/slider/third-slide-mob.png");
+    }
   }
 
   &.third &_content {
-    padding-top: 162px;
+    padding-top: 160px;
 
     @include response-to(medium) {
       padding-top: 180px;
     }
 
     @include response-to(small) {
-      padding-top: 150px;
+      padding-top: 215px;
     }
   }
 
   &.third &_caption {
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-    max-width: 650px;
-    margin-bottom: 54px;
+    max-width: 450px;
+    margin-bottom: 24px;
     letter-spacing: 0.02em;
     line-height: 130.6%;
     font-weight: 800;
     font-size: 32px;
 
     @include response-to(small) {
-      font-size: 30px;
-      margin-bottom: 11px;
+      font-size: 24px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      max-width: unset;
+      margin-bottom: 17px;
     }
   }
 
   &.third &_text {
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
     font-weight: 700;
     max-width: 575px;
     font-size: 22px;
     line-height: 150.9%;
-    margin-bottom: 21px;
+    margin-bottom: 12px;
 
     @include response-to(small) {
-      font-size: 24px;
+      display: none;
     }
   }
 
   &.third &_btn {
-    filter: drop-shadow(2px 6px 6px rgba(0, 0, 0, 0.25));
-    background-color: #fff;
-    width: 313px;
-    padding: 18px 0 17px;
-    color: #000;
-    letter-spacing: 0.14em;
-    font-size: .8rem;
-    line-height: .25em;
-    border: none;
-    font-weight: 700;
-    margin-top: 3.33rem;
-    display: none;
+    width: 149px;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 30px;
   }
 }

@@ -1,0 +1,41 @@
+.slider__item {
+
+  &.five {
+    background-image: url("../../../../img/home-page/slider/five-slide.png");
+    padding-top: 210px;
+    background-position: center top;
+
+    @include response-to(small) {
+      padding-top: 215px;
+      background-image: url("../../../../img/home-page/slider/five-slide-mob.png");
+    }
+  }
+
+  &.five &_caption {
+    max-width: 400px;
+    margin-bottom: 50px;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 120.7%;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    @include response-to(small) {
+      font-size: 24px;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+      color: #fff;
+      max-width: unset;
+      margin-bottom: 17px;
+    }
+  }
+
+  &.five &_btn {
+    width: 149px;
+    padding: 16px 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+}

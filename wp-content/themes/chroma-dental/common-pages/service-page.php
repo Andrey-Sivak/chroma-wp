@@ -26,11 +26,8 @@ get_header();
         case 'Dental Bonding':
           get_template_part('template-parts/pages/dental-bonding');
           break;
-        case 'Headaches and tmd relief':
+        case 'Headaches and tmj/tmd relief':
           get_template_part('template-parts/pages/headaches-and-tmd-relief');
-          break;
-        case 'Sedation during dentistry':
-          get_template_part('template-parts/pages/sedation-during-dentistry');
           break;
         case 'Tooth extraction without sedation':
           get_template_part('template-parts/pages/tooth-extraction');
@@ -50,7 +47,7 @@ get_header();
         case 'Dental implants':
           get_template_part('template-parts/pages/dental-implants');
           break;
-        case 'Orthodontics':
+        case 'Invisible Braces':
           get_template_part('template-parts/pages/orthodontics');
           break;
         case 'Root canals':
@@ -62,6 +59,11 @@ get_header();
         case 'Cosmetic dentistry':
           get_template_part('template-parts/pages/сosmetic-dentistry');
           break;
+        case 'Children`s Dentistry':
+          get_template_part('template-parts/pages/children-dentistry');
+          break;
+	      default:
+	        get_template_part('template-parts/pages/service-base-template');
     }
     ?>
 
@@ -79,5 +81,7 @@ get_header();
 	</main>
 
 <?php endwhile; wp_reset_query(); ?>
-<?php get_footer();
+<?php get_footer();?>
+<script src="https://unpkg.com/imask"></script>
+
 

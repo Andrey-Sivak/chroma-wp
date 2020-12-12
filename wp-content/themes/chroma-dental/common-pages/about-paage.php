@@ -78,8 +78,8 @@ get_header();?>
           </span>
           <?php foreach ($diplomas as $diploma) : ?>
           <figure class="third-section__diplomas_item">
-            <a href="<?= $diploma['diploma']; ?>" data-fancybox>
-              <img src="<?= $diploma['diploma']; ?>" alt="img" class="third-section__diplomas_img">
+            <a href="<?= $diploma['diploma_large']; ?>" data-fancybox>
+              <img src="<?= $diploma['diploma_min']; ?>" alt="img" class="third-section__diplomas_img">
             </a>
           </figure>
           <?php endforeach; ?>
@@ -91,6 +91,19 @@ get_header();?>
 				</div>
 			</div>
 		</section>
+
+	  <?php $partners = get_field('partners');
+	  if( !empty( $partners ) ) : ?>
+        <section class="partners container">
+          <div class="partners__wrap">
+			  <?php foreach ( $partners as $partner ) : ?>
+                <figure class="partners__image">
+                  <img src="<?= $partner['image']; ?>" alt="img">
+                </figure>
+			  <?php endforeach; ?>
+          </div>
+        </section>
+	  <?php endif; ?>
 
 	</main>
 

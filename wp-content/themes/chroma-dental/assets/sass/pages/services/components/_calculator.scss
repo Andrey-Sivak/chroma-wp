@@ -1,7 +1,7 @@
 .calculator {
   background-color: rgba( color( main-color ), 0.05 );
   padding: 42px 0 57px;
-  margin-bottom: 102px;
+  margin-bottom: 65px;
 
   @include response-to(small) {
     margin-bottom: 40px;
@@ -28,9 +28,9 @@
 
   &__subcaption {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.21em;
-    margin-bottom: 2.67rem;
+    margin-bottom: 33px;
 
     @include response-to(small) {
       display: none;
@@ -165,27 +165,23 @@
   &.no-image {
 
     & .calculator__main_item {
-      height: 272px;
+      padding: 20px 10px;
       @include flex-center();
-      padding: 0;
-    }
 
-    & .calculator__list {
-      max-width: 912px;
+      @include response-to(small) {
+        padding: 10px 10px;
+      }
     }
 
     & .calculator__main_item-caption {
       max-width: 131px;
       text-align: center;
-      font-size: 18px;
+      font-size: 1rem;
       font-weight: 700;
-      line-height: 174.53%;
-    }
-
-    & .calculator__main_item-caption {
+      line-height: 150.53%;
+      word-break: break-word;
 
       @include response-to(small) {
-        word-break: break-word;
         font-size: 12px;
       }
     }

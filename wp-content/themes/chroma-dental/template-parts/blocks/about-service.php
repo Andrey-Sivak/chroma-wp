@@ -1,5 +1,5 @@
-<section id="<?php echo esc_attr( $id ); ?>" class="about-service container">
-	<?php if ( have_rows( 'about_service' ) ): ?>
+<?php if ( have_rows( 'about_service' ) ): ?>
+  <section id="<?php echo esc_attr( $id ); ?>" class="about-service container">
 	  <?php while ( have_rows( 'about_service' ) ) : the_row(); ?>
       <?php if ( get_row_layout() == 'section_caption' ) : ?>
 	      <h2 class="about-service__section-caption"><?php the_sub_field( 'section_caption_text' ); ?></h2>
@@ -35,7 +35,7 @@
         </div>
       <?php endif; ?>
     <?php endwhile; ?>
-  <?php endif; ?>
 
-	<?php get_template_part('template-parts/components/order-free-consultation'); ?>
-</section>
+    <?php get_template_part('template-parts/components/order-free-consultation'); ?>
+  </section>
+<?php endif; ?>

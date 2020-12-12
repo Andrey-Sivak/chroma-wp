@@ -9,6 +9,7 @@
  * @package Chroma_Dental
  */
 
+session_start();
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -16,6 +17,19 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta property="og:title"
+        content="<?php
+                if( ! is_home() ):
+                  wp_title( '|', true, 'right' );
+                endif;
+                bloginfo( 'name' );
+                ?>">
+  <meta property="og:site_name" content="Chroma Dental">
+  <meta property="og:url" content="<?= get_permalink() ?>">
+  <meta property="og:description" content="Chroma Dental. Dentistry in Toronto ON">
+  <meta property="og:image" content="<?= get_template_directory_uri() . '/dist/img/home-page/slider/first-slide-mob.png' ?>">
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . "/favicon/apple-touch-icon.png";?>">
@@ -80,22 +94,6 @@
 	    ); ?>
 	    <?php endif; ?>
 
-      <a href="#" class="header__btn">book an appointment</a>
+      <a href="<?= get_field('external_link', 'option'); ?>" class="header__btn">book an appointment</a>
     </div>
   </header>
-
-	<!--<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-/*			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				*/?>
-				<h1 class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) ); */?>" rel="home"><?php /*bloginfo( 'name' ); */?></a></h1>
-				<?php
-/*			else :
-				*/?>
-				<p class="site-title"><a href="<?php /*echo esc_url( home_url( '/' ) ); */?>" rel="home"><?php /*bloginfo( 'name' ); */?></a></p>
-				<?php
-/*			endif; */?>
-		</div>
-	</header>-->

@@ -1,6 +1,6 @@
 .service-offer {
   margin-top: 40px;
-  margin-bottom: 150px;
+  margin-bottom: 65px;
 
   @include response-to(small) {
     margin-bottom: 50px;
@@ -21,7 +21,7 @@
 
   &__content {
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
 
     @include response-to(small) {
       flex-direction: column;
@@ -57,18 +57,16 @@
     }
 
     &_btns-block {
+      padding: 10px 0 10px 37px;
       width: 400px;
-      padding-left: 37px;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
       background-color: rgba( color( main-color ), .05 );
       position: relative;
 
       @include response-to(small) {
         order: 1;
         width: 100%;
-        margin: 0 -15px;
         padding: 48px 15px;
       }
 
@@ -99,7 +97,7 @@
       text-align: center;
       background-color: #fff;
       font-family: $roboto;
-      margin: 5px 0;
+      margin: 10px 0;
 
       @include response-to(small) {
         margin: 12px 0;
@@ -116,14 +114,14 @@
         @include on-event {
           text-decoration: underline;
         }
+      }
 
-        & > p {
-          text-transform: uppercase;
-          letter-spacing: 0.03em;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 20px;
-        }
+      & > p {
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
       }
     }
   }

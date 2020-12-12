@@ -1,9 +1,3 @@
-main {
-  padding-top: 96px;
-  position: relative; }
-  main.home {
-    padding-top: 0; }
-
 @font-face {
   font-family: "Arsenal";
   font-weight: 700;
@@ -128,7 +122,8 @@ body {
       padding: 0 15px; } }
 
 main {
-  padding-top: 96px; }
+  padding-top: 65px;
+  position: relative; }
   @media (max-width: 992px) {
     main {
       padding-top: 65px; } }
@@ -259,12 +254,22 @@ main {
     @media (max-width: 992px) {
       .menu-item-object-custom:before {
         right: 58px; } }
-  .menu-item-object-custom:hover .sub-menu {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-    max-height: 1000px;
-    opacity: 1; }
+  @media (min-width: 760px) {
+    .menu-item-object-custom:hover .sub-menu {
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0);
+      max-height: 1000px;
+      opacity: 1;
+      border: 1px solid #000; } }
+  @media (max-width: 767px) {
+    .menu-item-object-custom .sub-menu.active {
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0);
+      max-height: 1000px;
+      opacity: 1;
+      border: none; } }
   .menu-item-object-custom .sub-menu {
     -webkit-transform: translateX(-50px);
         -ms-transform: translateX(-50px);
@@ -290,9 +295,10 @@ main {
       background-color: #6F9890;
       -webkit-transition: all ease-in-out .3s;
       transition: all ease-in-out .3s;
-      display: block; }
+      display: block;
+      background-color: #fff; }
       .menu-item-object-custom .sub-menu li:hover, .menu-item-object-custom .sub-menu li:active, .menu-item-object-custom .sub-menu li:focus {
-        background-color: #7ea39b; }
+        background-color: white; }
       .menu-item-object-custom .sub-menu li:not(:last-child) {
         border-bottom: 1px solid #000; }
     .menu-item-object-custom .sub-menu a {
@@ -405,13 +411,16 @@ main {
         -webkit-transition: all ease-in-out .3s;
         transition: all ease-in-out .3s;
         overflow: hidden;
-        padding-top: 3rem;
-        height: 100vh; } }
+        padding-top: 3rem; } }
     .header__menu.active {
       -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
               transform: translateY(0);
-      z-index: 100; }
+      z-index: 100;
+      background-color: #fff; }
+      @media (max-width: 767px) {
+        .header__menu.active {
+          padding-bottom: 30px; } }
   .header-menu__btn {
     display: none;
     height: 20px;
@@ -452,12 +461,14 @@ main {
       .header-menu__burger.active:before {
         -webkit-transform: rotate(45deg) translate(5px, 8px);
             -ms-transform: rotate(45deg) translate(5px, 8px);
-                transform: rotate(45deg) translate(5px, 8px); }
+                transform: rotate(45deg) translate(5px, 8px);
+        background-color: #000; }
       .header-menu__burger.active:after {
         -webkit-transform: rotate(-45deg) translate(3px, -7px);
             -ms-transform: rotate(-45deg) translate(3px, -7px);
                 transform: rotate(-45deg) translate(3px, -7px);
-        width: 28px; }
+        width: 28px;
+        background-color: #000; }
   .header__btn {
     width: 268px;
     text-align: center;
@@ -871,14 +882,28 @@ main {
     background-color: rgba(111, 152, 144, 0.05);
     max-width: 245px;
     width: 100%;
-    padding: 8px 13px;
-    font-size: .8rem;
-    line-height: 1.25em; }
-    .consultation-btns__call-block_caption {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 14px 0 12px; }
+    .consultation-btns__call-block p {
       font-weight: 600;
-      margin-bottom: 4px; }
+      font-size: 12px;
+      line-height: 15px; }
     .consultation-btns__call-block a {
-      color: #024DBD; }
+      color: #6F9890;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px; }
       .consultation-btns__call-block a:hover, .consultation-btns__call-block a:active, .consultation-btns__call-block a:focus {
         text-decoration: underline; }
   .consultation-btns.col {
@@ -1047,7 +1072,7 @@ main {
     .octagon_item .corner {
       position: relative;
       display: block;
-      height: -webkit-fill-available; }
+      height: 100%; }
       .octagon_item .corner:after {
         position: absolute;
         content: '';
@@ -1190,7 +1215,8 @@ main {
             -ms-flex-align: center;
                 align-items: center; } }
   .covid__item {
-    max-width: 30%; }
+    max-width: 30%;
+    width: 100%; }
     @media (max-width: 767px) {
       .covid__item {
         max-width: 65%;
@@ -1230,7 +1256,7 @@ main {
     color: #DA2314; }
 
 .form-page {
-  padding: 160px 0 100px; }
+  padding: 65px 0 100px; }
   .form-page__caption {
     margin: 0 auto 40px;
     font-family: "Roboto";
@@ -1239,6 +1265,11 @@ main {
     font-weight: 500;
     text-align: center;
     max-width: 1280px; }
+    @media (max-width: 767px) {
+      .form-page__caption {
+        margin-bottom: 32px;
+        font-size: 40px;
+        line-height: 47px; } }
   .form-page__form {
     font-family: "Montserrat";
     font-size: 1.2rem;
@@ -1283,6 +1314,26 @@ main {
             -ms-flex-pack: start;
                 justify-content: flex-start;
         margin-right: calc((100% - 570px) / 2); }
+        @media (max-width: 767px) {
+          .form-page__form_formgroup:last-of-type {
+            max-width: 300px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 25px; } }
+      @media (max-width: 767px) {
+        .form-page__form_formgroup {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: start;
+          -webkit-align-items: flex-start;
+              -ms-flex-align: start;
+                  align-items: flex-start;
+          max-width: 300px;
+          width: 100%;
+          margin: 0 auto 15px; } }
       .form-page__form_formgroup .warning {
         color: red;
         font-size: 14px;
@@ -1299,6 +1350,9 @@ main {
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none; }
+      @media (max-width: 767px) {
+        .form-page__form_label {
+          margin-bottom: 15px; } }
       .form-page__form_label.checkbox {
         position: relative;
         -webkit-transform: unset;
@@ -1309,6 +1363,12 @@ main {
         width: fit-content;
         top: unset;
         left: unset; }
+        .form-page__form_label.checkbox .warning {
+          position: absolute;
+          top: 40px;
+          width: 200px;
+          margin-top: 0;
+          margin-left: 0; }
         .form-page__form_label.checkbox .req {
           position: absolute;
           top: 0;
@@ -1328,6 +1388,9 @@ main {
           width: 316px;
           font-size: 10px;
           font-weight: 500; }
+          @media (max-width: 767px) {
+            .form-page__form_label.checkbox .text {
+              width: 200px; } }
           .form-page__form_label.checkbox .text a {
             display: block;
             color: #000;
@@ -1343,6 +1406,10 @@ main {
       transition: all ease-in-out .3s; }
       .form-page__form_input:hover, .form-page__form_input:active, .form-page__form_input:focus {
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); }
+      @media (max-width: 767px) {
+        .form-page__form_input {
+          width: 100%;
+          max-width: 350px; } }
       .form-page__form_input.warn {
         box-shadow: 0 2px 2px rgba(255, 0, 0, 0.3); }
       .form-page__form_input::-webkit-input-placeholder {
@@ -1373,6 +1440,8 @@ main {
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center; }
+        .form-page__form_input[type="checkbox"].warn + .form-page__form_input.checkbox {
+          box-shadow: 0 2px 2px rgba(255, 0, 0, 0.3); }
       .form-page__form_input.checkbox {
         position: relative;
         width: 34px;

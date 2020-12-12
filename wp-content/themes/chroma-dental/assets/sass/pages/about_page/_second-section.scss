@@ -1,5 +1,5 @@
 .second-section {
-  margin: 72px 0 85px;
+  margin: 20px 0;
   font-family: $roboto;
 
   @include response-to(medium) {
@@ -20,7 +20,7 @@
 
   &__text {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.33em;
     margin-bottom: 2rem;
 

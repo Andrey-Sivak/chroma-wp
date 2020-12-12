@@ -1,5 +1,6 @@
-<?php $difference = get_field('difference'); ?>
+<?php $difference = get_field('difference');
 
+if($difference['caption']) : ?>
 <section class="difference container">
     <h2 class="difference__caption"><?= $difference['caption']; ?></h2>
     <div class="difference__wrap">
@@ -12,3 +13,4 @@
     </div>
 	<?php get_template_part('template-parts/components/order-free-consultation'); ?>
   </section>
+<?php endif;

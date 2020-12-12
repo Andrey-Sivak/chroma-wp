@@ -10,7 +10,7 @@
     & .corner {
       position: relative;
       display: block;
-      height: -webkit-fill-available;
+      height: 100%;
 
       &:after {
         position: absolute;

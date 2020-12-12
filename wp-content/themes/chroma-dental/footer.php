@@ -55,25 +55,11 @@
       <?php while( have_rows('footer_links', 'option') ): the_row(); ?>
         <a href="<?php the_sub_field('link') ?>" class="footer__links_link"><?php the_sub_field('link_text') ?></a>
       <?php endwhile; ?>
-      <a href="<?= get_home_url() . '/wp-sitemap.xml' ?>" class="footer__links_link">Sitemap XML</a>
+      <a href="<?= get_template_directory_uri() . '/sitemap.xml' ?>" class="footer__links_link">Sitemap XML</a>
     </div>
   </div>
   <?php endif; ?>
 </footer>
-
-	<!--<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php /*echo esc_url( __( 'https://wordpress.org/', 'chroma-dental' ) ); */?>">
-				<?php
-/*				printf( esc_html__( 'Proudly powered by %s', 'chroma-dental' ), 'WordPress' );
-				*/?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-/*				printf( esc_html__( 'Theme: %1$s by %2$s.', 'chroma-dental' ), 'chroma-dental', '<a href="http://underscores.me/">Underscores.me</a>' );
-				*/?>
-		</div>
-	</footer>-->
 </div>
 
 <?php wp_footer(); ?>

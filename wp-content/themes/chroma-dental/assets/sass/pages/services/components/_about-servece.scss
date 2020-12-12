@@ -1,7 +1,7 @@
 .about-service {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 65px;
 
   @include response-to(small) {
     margin-top: 46px;
@@ -19,9 +19,9 @@
   &__photo {
 
     &_img {
+      width: 100%;
 
       @include response-to(medium) {
-        max-width: 350px;
         width: 100%;
       }
     }
@@ -35,6 +35,7 @@
     margin-bottom: 100px;
     padding: 31px 41px;
     position: relative;
+    max-width: 550px;
 
     @include response-to(small) {
       margin-left: 0;
@@ -58,7 +59,7 @@
     margin-bottom: 37px;
     font-weight: 700;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.5em;
   }
 

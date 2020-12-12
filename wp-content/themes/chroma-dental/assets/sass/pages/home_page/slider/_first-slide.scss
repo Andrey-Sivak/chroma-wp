@@ -2,13 +2,17 @@
 
   &.first {
     background-image: url("../../../../img/home-page/slider/first-slide.jpg");
+
+    @include response-to(small) {
+      background-image: url("../../../../img/home-page/slider/first-slide-mob.png");
+    }
   }
 
   &.first &_content {
     padding-top: 10.33rem;
 
     @include response-to(small) {
-      padding-top: 350px;
+      padding-top: 130px;
     }
   }
 
@@ -55,6 +59,7 @@
     @include response-to(small) {
       font-size: 24px;
       line-height: 30px;
+      max-width: 235px;
     }
   }
 }
