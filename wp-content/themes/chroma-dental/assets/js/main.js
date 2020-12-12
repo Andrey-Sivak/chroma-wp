@@ -3,6 +3,7 @@
 import { Menu } from "./Menu";
 import { Calculator } from "./calculator";
 import { Validation } from "./validationClass";
+import { Slider } from "./slider";
 
 window.addEventListener('load', function () {
 
@@ -21,38 +22,22 @@ window.addEventListener('load', function () {
         })
     })();
 
-    (function homePageSlider($) {
-        const slider = document.querySelector('.slider__wrap');
+    (function homePageSlider() {
+        const sliderWrap = document.querySelector('.slider__wrap');
 
-        if( !slider ) {
+        if( !sliderWrap ) {
             return;
         }
 
-        $( slider ).owlCarousel({
-            loop: true,
-            items: 1,
-            mouseDrag: false,
-            touchDrag: false,
-            lazyLoad: true,
-            // autoplay: true,
-            autoplayTimeout: 5000,
-            autoplaySpeed: 400,
-            dots: true,
-            autoplayHoverPause: true,
-            dotsContainer: $('.slider__dots')
+        const slider = new Slider({
+            wrap: '.slider__wrap',
+            autoplay: true,
+            autoplayDelay: 4000,
+            dotsWrap: 'slider__dots'
         });
 
-        const dots = [...document.querySelectorAll('.owl-dot')];
-        dots.forEach( function (item) {
-            item.addEventListener('click', function (e) {
-                const owl = $(slider).data('owl.carousel');
-                owl.options.autoplay = false;
-                owl.trigger('refresh.owl.carousel');
-                // owl.trigger('replace.owl.carousel', [{autoplay: false}]);
-                console.log(owl.options.autoplay);
-            })
-        })
-    })(jQuery);
+        slider.init();
+    })();
 
     (function menu() {
         const menu = new Menu({

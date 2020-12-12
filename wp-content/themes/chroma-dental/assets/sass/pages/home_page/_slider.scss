@@ -5,29 +5,42 @@
 @import 'slider/five-slide';
 
 .slider {
-  width: 100%;
+  overflow-x: hidden;
   position: relative;
-  height: 600px;
+  height: inherit;
 
-  @include response-to(small) {
-    height: 565px;
+  &-section {
+    width: 100%;
+    position: relative;
+    height: 600px;
+
+    @include response-to(small) {
+      height: 565px;
+    }
   }
 
-  & .owl-item.active > &__item {
-    display: block;
+  .s-notransition {
+    transition: 0s;
   }
 
-  & .owl-item.active > &__item.four {
+  &__wrap {
     display: flex;
+    transition: .5s;
   }
 
   &__item {
+    flex-basis: 100%;
+    flex-shrink: 0;
     height: 600px;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: none;
+
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 
     @include response-to(small) {
       height: 565px;
@@ -121,7 +134,7 @@
     }
   }
 
-  & button {
+  .dot {
     background-color: transparent;
     width: 20px;
     height: 20px;

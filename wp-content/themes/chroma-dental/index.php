@@ -8,68 +8,70 @@ get_header();?>
 
 	<main id="primary" class="site-main home">
 
-    <section class="slider">
-      <div class="slider__wrap owl-carousel">
-        <div class="slider__item first">
-          <div class="container">
-            <div class="slider__item_content">
-              <h2 class="slider__item_caption">Smile!</h2>
-              <p class="slider__item_subcaption">It suits you</p>
-              <p class="slider__item_text">1000+ happy smiles in Canada</p>
+    <section class="slider-section">
+      <div class="slider">
+        <div class="slider__wrap">
+          <div class="slider__item first">
+            <div class="container">
+              <div class="slider__item_content">
+                <h2 class="slider__item_caption">Smile!</h2>
+                <p class="slider__item_subcaption">It suits you</p>
+                <p class="slider__item_text">1000+ happy smiles in Canada</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item second">
+		      <?php get_template_part('template-parts/blocks/covid'); ?>
+          </div>
+          <div class="slider__item third">
+            <div class="container">
+              <div class="slider__item_content">
+                <h2 class="slider__item_caption">Transform your smile with Invisible Braces for 199 $ a month</h2>
+                <p class="slider__item_text">How does invisible bracelets treatment work?</p>
+                <p class="slider__item_text">3 easy steps can put you on the path to your brand-new smile.</p>
+                <a href="<?= esc_url( get_permalink( get_page_by_title( 'Dental Bonding' ) ) ); ?>" class="btn slider__item_btn">see more</a>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item four">
+            <div class="map">
+              <address>595 Sheppard Ave E, North York, ON Unit #206,207 and 208</address>
+              <div class="subway">
+                <p class="subway__icon">m</p>
+                <p class="subway__caption">Bayview subway station</p>
+                <span>(Steps from the new Bayview Subway Station)</span>
+              </div>
+              <div class="location">
+                <p>Bayview Village <br>Shopping Center</p>
+                <img src="<?= get_template_directory_uri() . '/dist/img/home-page/slider/location.png'; ?>" alt="img">
+              </div>
+            </div>
+            <div class="places">
+              <div class="place">
+                <p class="place__caption">595 Sheppard Ave E, North York, ON Unit #206,207 and 208</p>
+              </div>
+              <div class="place">
+                <p class="place__caption">We are just across from Bayview Village Shopping Centre</p>
+              </div>
+              <div class="place">
+                <p class="place__caption">FREE Visitor Parking Easy access to 401, DVP</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item five">
+            <div class="container">
+              <h2 class="slider__item_caption">Our children smile in the same language</h2>
+              <a href="<?= esc_url( get_permalink( get_page_by_title( 'Children`s Dentistry' ) ) ); ?>" class="btn slider__item_btn">see more</a>
             </div>
           </div>
         </div>
-        <div class="slider__item second">
-          <?php get_template_part('template-parts/blocks/covid'); ?>
-        </div>
-        <div class="slider__item third">
-          <div class="container">
-            <div class="slider__item_content">
-              <h2 class="slider__item_caption">Transform your smile with Invisible Braces for 199 $ a month</h2>
-              <p class="slider__item_text">How does invisible bracelets treatment work?</p>
-              <p class="slider__item_text">3 easy steps can put you on the path to your brand-new smile.</p>
-              <a href="<?= esc_url( get_permalink( get_page_by_title( 'Dental Bonding' ) ) ); ?>" class="btn slider__item_btn">see more</a>
-            </div>
-          </div>
-        </div>
-        <div class="slider__item four">
-          <div class="map">
-            <address>595 Sheppard Ave E, North York, ON Unit #206,207 and 208</address>
-            <div class="subway">
-              <p class="subway__icon">m</p>
-              <p class="subway__caption">Bayview subway station</p>
-              <span>(Steps from the new Bayview Subway Station)</span>
-            </div>
-            <div class="location">
-              <p>Bayview Village <br>Shopping Center</p>
-              <img src="<?= get_template_directory_uri() . '/dist/img/home-page/slider/location.png'; ?>" alt="img">
-            </div>
-          </div>
-          <div class="places">
-            <div class="place">
-              <p class="place__caption">595 Sheppard Ave E, North York, ON Unit #206,207 and 208</p>
-            </div>
-            <div class="place">
-              <p class="place__caption">We are just across from Bayview Village Shopping Centre</p>
-            </div>
-            <div class="place">
-              <p class="place__caption">FREE Visitor Parking Easy access to 401, DVP</p>
-            </div>
-          </div>
-        </div>
-        <div class="slider__item five">
-          <div class="container">
-            <h2 class="slider__item_caption">Our children smile in the same language</h2>
-            <a href="<?= esc_url( get_permalink( get_page_by_title( 'Children`s Dentistry' ) ) ); ?>" class="btn slider__item_btn">see more</a>
-          </div>
-        </div>
+        <div class="slider__dots" id="dots"></div>
       </div>
       <div class="slider__offer wow animate__fadeInRightBig" data-wow-offset="10" data-wow-duration="1s">
         <p class="slider__offer_text">Plan Your Visit Now</p>
         <a href="<?= get_field('external_link', 'option'); ?>" class="btn slider__offer_btn">book an appointment</a>
         <p class="slider__offer_phone">Call us: &nbsp;&nbsp;&nbsp;<a href="tel:<?= get_field('phone', 'option') ?>"><?= get_field('phone', 'option') ?></a></p>
       </div>
-      <div class="slider__dots"></div>
     </section>
 
     <?php $covid_section = get_field('covid_block', 'option');
