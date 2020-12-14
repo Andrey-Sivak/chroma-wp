@@ -61,6 +61,7 @@ get_header();?>
           <div class="slider__item five">
             <div class="container">
               <h2 class="slider__item_caption">Our children smile in the same language</h2>
+              <p class="slider__item_text">Children-Friendly Dentists - Comfortable & Anxiety-Free</p>
               <a href="<?= esc_url( get_permalink( get_page_by_title( 'Children`s Dentistry' ) ) ); ?>" class="btn slider__item_btn">see more</a>
             </div>
           </div>

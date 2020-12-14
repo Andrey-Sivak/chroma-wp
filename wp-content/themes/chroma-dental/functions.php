@@ -167,7 +167,7 @@ function custom_styles() {
 		wp_enqueue_script( 'fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array(), _S_VERSION, true );
 	} elseif ( is_page( 7 ) ) {
 		wp_enqueue_style( 'home-style', get_template_directory_uri() . '/dist/css/home-page.min.css', array(), _S_VERSION );
-		wp_enqueue_script( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array(), _S_VERSION, true );
+//		wp_enqueue_script( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array(), _S_VERSION, true );
 	} elseif ( is_page( 22 ) ) {
 		wp_enqueue_style( 'contacts-style', get_template_directory_uri() . '/dist/css/contacts-page.min.css', array(), _S_VERSION );
 	} elseif ( is_page( 449 ) ) {

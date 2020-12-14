@@ -13,7 +13,7 @@
 
   &.five &_caption {
     max-width: 400px;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
     font-weight: 800;
     font-size: 32px;
     line-height: 120.7%;
@@ -26,6 +26,18 @@
       color: #fff;
       max-width: unset;
       margin-bottom: 17px;
+    }
+  }
+
+  &.five &_text {
+    font-weight: 700;
+    max-width: 575px;
+    font-size: 22px;
+    line-height: 150.9%;
+    margin-bottom: 12px;
+
+    @include response-to(small) {
+      display: none;
     }
   }
 

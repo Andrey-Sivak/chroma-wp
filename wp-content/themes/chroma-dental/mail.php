@@ -22,4 +22,9 @@ if( $problem ) {
 }
 
 $page_title = "Новая заявка с сайта \"$site_name\"";
-mail($mail, $page_title, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $emailer_subj");
+mail($mail, $page_title, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $emailer_subj");?>
+
+<!--#!/usr/bin/php
+--><?php
+/*echo "'Content-type: text/plain; charset=\"utf - 8\"\n From: $emailer_subj' | mail -s $message $mail"
+*/?>
