@@ -5,18 +5,18 @@ $helvetica: 'Helvetica';
 
 $dir: '../fonts';
 
-@include font-face( $dir, $arsenal, 'Bold' );
+@include font-face( $dir, $arsenal, 'Bold', $extension: 'otf');
 
-@include font-face( $dir, $helvetica, 'Bold' );
+@include font-face( $dir, $helvetica, 'Bold', $extension: 'otf');
 
-@include font-face( $dir, $roboto, 'Bold' );
-@include font-face( $dir, $roboto, 'Medium' );
-@include font-face( $dir, $roboto, 'Light' );
-@include font-face( $dir, $roboto, 'Regular' );
+@include font-face( $dir, $roboto, 'Bold', $extension: 'otf');
+@include font-face( $dir, $roboto, 'Medium', $extension: 'otf');
+@include font-face( $dir, $roboto, 'Light', $extension: 'otf');
+@include font-face( $dir, $roboto, 'Regular', $extension: 'otf');
 
-@include font-face( $dir, $montserrat, 'Regular' );
-@include font-face( $dir, $montserrat, 'Bold' );
-@include font-face( $dir, $montserrat, 'ExtraBold' );
-@include font-face( $dir, $montserrat, 'Light' );
-@include font-face( $dir, $montserrat, 'Medium' );
-@include font-face( $dir, $montserrat, 'SemiBold' );
+@include font-face( $dir, $montserrat, 'Regular', $extension: 'otf');
+@include font-face( $dir, $montserrat, 'Bold', $extension: 'otf');
+@include font-face( $dir, $montserrat, 'ExtraBold', $extension: 'otf');
+@include font-face( $dir, $montserrat, 'Light', $extension: 'otf');
+@include font-face( $dir, $montserrat, 'Medium', $extension: 'otf');
+@include font-face( $dir, $montserrat, 'SemiBold', $extension: 'otf');

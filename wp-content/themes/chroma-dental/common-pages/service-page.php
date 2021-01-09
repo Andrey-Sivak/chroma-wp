@@ -23,39 +23,39 @@ get_header();
     $page_title = get_the_title();
 
     switch ( $page_title ) {
-        case 'Dental Bonding':
+        /*case 'Dental Bonding':
           get_template_part('template-parts/pages/dental-bonding');
-          break;
-        case 'Headaches and tmj/tmd relief':
+          break;*/
+        /*case 'Headaches and tmj/tmd relief':
           get_template_part('template-parts/pages/headaches-and-tmd-relief');
-          break;
-        case 'Tooth extraction without sedation':
+          break;*/
+        /*case 'Tooth extraction without sedation':
           get_template_part('template-parts/pages/tooth-extraction');
-          break;
+          break;*/
         case 'Emergency service':
           get_template_part('template-parts/pages/emergency-service');
           break;
-        case 'Veneers':
+        /*case 'Veneers':
           get_template_part('template-parts/pages/veneers');
-          break;
-        case 'Dental bridge':
+          break;*/
+        /*case 'Dental bridge':
           get_template_part('template-parts/pages/dental-bridges');
-          break;
+          break;*/
         case 'Gum disease control and therapy':
           get_template_part('template-parts/pages/gum-disease-control-and-therapy');
           break;
-        case 'Dental implants':
+        /*case 'Dental implants':
           get_template_part('template-parts/pages/dental-implants');
-          break;
-        case 'Invisible Braces':
+          break;*/
+        /*case 'Invisible Braces':
           get_template_part('template-parts/pages/orthodontics');
-          break;
-        case 'Root canals':
+          break;*/
+        /*case 'Root canals':
           get_template_part('template-parts/pages/root-canals');
-          break;
-        case 'Teeth whitening':
+          break;*/
+        /*case 'Teeth whitening':
           get_template_part('template-parts/pages/teeth-whitening');
-          break;
+          break;*/
         case 'Cosmetic dentistry':
           get_template_part('template-parts/pages/сosmetic-dentistry');
           break;

@@ -12,7 +12,7 @@ $result_link = get_permalink( $previous_page ) . 'result';
 
 <main id="primary" class="site-main form-page">
 
-	<h1 class="form-page__caption">We’v got your result, introduce yourself!</h1>
+	<h1 class="form-page__caption">We’ve got your result, introduce yourself!</h1>
 	<form action="<?= get_template_directory_uri() . '/mail.php'; ?>"
         method="post"
         class="form-page__form"

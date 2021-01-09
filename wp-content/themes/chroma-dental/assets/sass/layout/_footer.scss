@@ -102,6 +102,28 @@
       margin-bottom: .8rem;
       width: 100%;
     }
+
+    &_soc-icons {
+      display: flex;
+
+      @include response-to(small) {
+        justify-content: center;
+      }
+
+      & > a {
+        width: 20%;
+        @include transition-ease;
+        margin-right: 10px;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        & > img {
+          max-width: 80%;
+        }
+      }
+    }
   }
 
   &__services {

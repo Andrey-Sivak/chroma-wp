@@ -12,6 +12,15 @@
   }
 }
 
+body {
+  position: relative;
+  padding-top: 64px;
+
+  @include response-to(medium) {
+    padding-top: 91px;
+  }
+}
+
 main {
   padding-top: 65px;
   position: relative;

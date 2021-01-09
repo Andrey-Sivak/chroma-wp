@@ -18,17 +18,19 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <meta property="og:title"
-        content="<?php
-                if( ! is_home() ):
-                  wp_title( '|', true, 'right' );
-                endif;
-                bloginfo( 'name' );
-                ?>">
+  <meta property="og:title" content="<?= get_field('page_title'); ?>">
+  <meta name="title" content="<?= get_field('page_title'); ?>">
   <meta property="og:site_name" content="Chroma Dental">
-  <meta property="og:url" content="<?= get_permalink() ?>">
-  <meta property="og:description" content="Chroma Dental. Dentistry in Toronto ON">
+  <meta property="og:url" content="<?= get_permalink(); ?>">
+  <meta name="url" content="<?= get_permalink(); ?>">
+  <meta property="og:description" content="<?= get_field( 'page_description'); ?>">
+  <meta name="description" content="<?= get_field( 'page_description'); ?>">
   <meta property="og:image" content="<?= get_template_directory_uri() . '/dist/img/home-page/slider/first-slide-mob.png' ?>">
+  <meta name="image" content="<?= get_template_directory_uri() . '/dist/img/home-page/slider/first-slide-mob.png' ?>">
+  <meta name="keywords" content="<?= get_field('page_keywords'); ?>">
+  <?php if( get_the_title() == 'Home page' ) : ?>
+      <meta name="google-site-verification" content="pT28wfTasiZC-SejuLPOvswaFIYCmG_lkc-CjWsaN_8" />
+  <?php endif; ?>
 
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -65,6 +67,14 @@ session_start();
 
     </script>
 	<?php endif; ?>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5GLJCS4');</script>
+  <!-- End Google Tag Manager -->
 
 
 	<?php wp_head(); ?>

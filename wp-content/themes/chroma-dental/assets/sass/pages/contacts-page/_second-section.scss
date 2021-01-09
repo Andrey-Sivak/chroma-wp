@@ -297,6 +297,25 @@
         }
       }
 
+      & .soc-media {
+        display: flex;
+        margin-top: 20px;
+
+        & > a {
+          width: 20%;
+          margin-right: 10px;
+          @include transition-ease;
+
+          &:hover {
+            transform: scale(1.15);
+          }
+
+          & > img {
+            max-width: 80%;
+          }
+        }
+      }
+
       &_subcaption {
         font-weight: 500;
         margin-top: 1rem;

@@ -1,8 +1,8 @@
 <?php
 
 $mail = trim($_POST['mail']);
-$emailer_subj =  'no-reply@chromadental.ca';
 $site_name = "Chroma Dental";
+$headers = "From: www-data@chromadental.ca" . "\r\n";
 
 $name = trim($_POST['name']);
 $age = trim($_POST['age']);
@@ -22,9 +22,4 @@ if( $problem ) {
 }
 
 $page_title = "Новая заявка с сайта \"$site_name\"";
-mail($mail, $page_title, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $emailer_subj");?>
-
-<!--#!/usr/bin/php
---><?php
-/*echo "'Content-type: text/plain; charset=\"utf - 8\"\n From: $emailer_subj' | mail -s $message $mail"
-*/?>
+mail($mail, $page_title, $message, $headers);

@@ -3,6 +3,10 @@
 .header {
   background-color: color( main-color );
   height: 4.3rem;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
   @include flex-center();
 
   @include response-to(small) {

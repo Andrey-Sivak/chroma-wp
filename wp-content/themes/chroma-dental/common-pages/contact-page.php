@@ -88,6 +88,21 @@ get_header();?>
 				</div>
 		    <?php endforeach; ?>
 		    <?php ?>
+
+        <div class="info-block__external-links">
+          <p class="info-block__external-links_caption">Our social media profiles</p>
+          <div class="soc-media">
+            <a href="<?= get_field('facebook', 'option'); ?>">
+              <img src="<?= get_template_directory_uri() . '/dist/img/icons/fb-green.png'; ?>" alt="facebook">
+            </a>
+            <a href="<?= get_field('instagram', 'option'); ?>">
+              <img src="<?= get_template_directory_uri() . '/dist/img/icons/inst-green.png'; ?>" alt="instagram">
+            </a>
+            <a href="<?= get_field('linkedin', 'option'); ?>">
+              <img src="<?= get_template_directory_uri() . '/dist/img/icons/linked-green.png'; ?>" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
 			</div>
 		</section>
 

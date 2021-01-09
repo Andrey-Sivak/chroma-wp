@@ -28,7 +28,7 @@ if ( have_rows( 'calculator' ) ) :
         <span class="calculator__select-age_item" data-age="adult">Adult</span>
       </div>
       <div class="calculator__main calculator__list" id="select-problem">
-        <p class="calculator__block-note">How many tooth missed?</p>
+        <p class="calculator__block-note"><?= $calculator['problem_title']; ?></p>
 	      <?php if ( have_rows( 'problems_list' ) ) :
 	        while ( have_rows( 'problems_list' ) ) : the_row(); ?>
             <div class="calculator__main_item" data-problem="<?php the_sub_field( 'text' ); ?>">

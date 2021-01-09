@@ -2,10 +2,10 @@
 
   &.third {
     color: #000;
-    background-image: url("../../../../img/home-page/slider/third-slide.jpg");
+    background-image: url("../../../../img/home-page/slider/third-slide.webp");
 
     @include response-to(small) {
-      background-image: url("../../../../img/home-page/slider/third-slide-mob.png");
+      background-image: url("../../../../img/home-page/slider/third-slide-mob.webp");
     }
   }
 

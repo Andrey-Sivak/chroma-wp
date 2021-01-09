@@ -11,7 +11,7 @@ get_header();?>
     <section class="slider-section">
       <div class="slider">
         <div class="slider__wrap">
-          <div class="slider__item first">
+          <div class="slider__item first" data-bg="webp">
             <div class="container">
               <div class="slider__item_content">
                 <h2 class="slider__item_caption">Smile!</h2>
@@ -20,10 +20,10 @@ get_header();?>
               </div>
             </div>
           </div>
-          <div class="slider__item second">
+          <div class="slider__item second" data-bg="webp">
 		      <?php get_template_part('template-parts/blocks/covid'); ?>
           </div>
-          <div class="slider__item third">
+          <div class="slider__item third" data-bg="webp">
             <div class="container">
               <div class="slider__item_content">
                 <h2 class="slider__item_caption">Transform your smile with Invisible Braces for 199 $ a month</h2>
@@ -58,7 +58,7 @@ get_header();?>
               </div>
             </div>
           </div>
-          <div class="slider__item five">
+          <div class="slider__item five" data-bg="webp">
             <div class="container">
               <h2 class="slider__item_caption">Our children smile in the same language</h2>
               <p class="slider__item_text">Children-Friendly Dentists - Comfortable & Anxiety-Free</p>
@@ -81,7 +81,7 @@ get_header();?>
     } ?>
 
     <?php $first_text_block = get_field('home-first-text_block'); ?>
-    <section class="third-section">
+    <section class="third-section" data-bg="webp">
       <div class="container">
         <div class="banner wow animate__fadeInLeftBig" data-wow-offset="10" data-wow-duration="1s">
           <div class="banner__wrap">
@@ -107,7 +107,7 @@ get_header();?>
       ]);
 
       if($all_wp_pages) : ?>
-      <section class="four-section">
+      <section class="four-section" data-bg="webp">
         <div class="container">
           <div class="banner wow animate__fadeInRightBig" data-wow-offset="10" data-wow-duration="1s">
             <div class="banner__wrap">

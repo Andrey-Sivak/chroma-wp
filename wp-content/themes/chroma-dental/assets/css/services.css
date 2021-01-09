@@ -1,84 +1,84 @@
 @font-face {
   font-family: "Arsenal";
   font-weight: 700;
-  src: url("../fonts/Arsenal-Bold.ttf") format("truetype");
+  src: url("../fonts/Arsenal-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Helvetica";
   font-weight: 700;
-  src: url("../fonts/Helvetica-Bold.ttf") format("truetype");
+  src: url("../fonts/Helvetica-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
-  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 500;
-  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("../fonts/Roboto-Medium.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
-  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  src: url("../fonts/Roboto-Light.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto-Regular.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
-  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Regular.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 700;
-  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 800;
-  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-ExtraBold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 300;
-  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Light.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
-  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Medium.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 600;
-  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-SemiBold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
@@ -120,6 +120,13 @@ body {
   @media (max-width: 767px) {
     .container {
       padding: 0 15px; } }
+
+body {
+  position: relative;
+  padding-top: 64px; }
+  @media (max-width: 992px) {
+    body {
+      padding-top: 91px; } }
 
 main {
   padding-top: 65px;
@@ -330,6 +337,10 @@ main {
 .header {
   background-color: #6F9890;
   height: 4.3rem;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -634,6 +645,26 @@ main {
     .footer__address p {
       margin-bottom: .8rem;
       width: 100%; }
+    .footer__address_soc-icons {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      @media (max-width: 767px) {
+        .footer__address_soc-icons {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center; } }
+      .footer__address_soc-icons > a {
+        width: 20%;
+        -webkit-transition: all ease-in-out .3s;
+        transition: all ease-in-out .3s;
+        margin-right: 10px; }
+        .footer__address_soc-icons > a:hover {
+          opacity: .7; }
+        .footer__address_soc-icons > a > img {
+          max-width: 80%; }
   .footer__services {
     display: -webkit-box;
     display: -webkit-flex;

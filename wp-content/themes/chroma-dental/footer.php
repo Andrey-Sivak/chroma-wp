@@ -27,6 +27,17 @@
       <address class="footer__address">
         <p><?php the_field('address', 'option'); ?></p>
         <p>Tel: <?php the_field('phone', 'option'); ?></p>
+        <div class="footer__address_soc-icons">
+          <a href="<?= get_field('facebook', 'option'); ?>">
+            <img src="<?= get_template_directory_uri() . '/dist/img/icons/fb.png'; ?>" alt="facebook">
+          </a>
+          <a href="<?= get_field('instagram', 'option'); ?>">
+            <img src="<?= get_template_directory_uri() . '/dist/img/icons/inst.png'; ?>" alt="instagram">
+          </a>
+          <a href="<?= get_field('linkedin', 'option'); ?>">
+            <img src="<?= get_template_directory_uri() . '/dist/img/icons/linked.png'; ?>" alt="LinkedIn">
+          </a>
+        </div>
       </address>
 	    <?php
       $services_parent_page = get_page_by_title('Services');
@@ -65,4 +76,8 @@
 <?php wp_footer(); ?>
 
 </body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GLJCS4"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 </html>

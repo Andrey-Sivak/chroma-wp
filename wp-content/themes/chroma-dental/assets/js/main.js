@@ -22,6 +22,19 @@ window.addEventListener('load', function () {
         })
     })();
 
+    (function checkImagesFormat() {
+        if (!window.createImageBitmap) {
+            const els = [...document.querySelectorAll('[data-bg]')];
+            els.forEach( (item) => {
+                const style = item.currentStyle || window.getComputedStyle(item, false);
+                let path = style.backgroundImage.slice(4, -1).replace(/"/g, "");
+                path = path.replace('webp', 'jpg');
+                item.style.backgroundImage = `url(${path})`;
+                console.log(item.style.backgroundImage);
+            });
+        }
+    })();
+
     (function homePageSlider() {
         const sliderWrap = document.querySelector('.slider__wrap');
 

@@ -1,13 +1,13 @@
 .slider__item {
 
   &.five {
-    background-image: url("../../../../img/home-page/slider/five-slide.png");
+    background-image: url("../../../../img/home-page/slider/five-slide.webp");
     padding-top: 210px;
     background-position: center top;
 
     @include response-to(small) {
       padding-top: 215px;
-      background-image: url("../../../../img/home-page/slider/five-slide-mob.png");
+      background-image: url("../../../../img/home-page/slider/five-slide-mob.webp");
     }
   }
 

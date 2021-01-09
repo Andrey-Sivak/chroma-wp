@@ -1,84 +1,84 @@
 @font-face {
   font-family: "Arsenal";
   font-weight: 700;
-  src: url("../fonts/Arsenal-Bold.ttf") format("truetype");
+  src: url("../fonts/Arsenal-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Helvetica";
   font-weight: 700;
-  src: url("../fonts/Helvetica-Bold.ttf") format("truetype");
+  src: url("../fonts/Helvetica-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
-  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 500;
-  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("../fonts/Roboto-Medium.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
-  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+  src: url("../fonts/Roboto-Light.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto-Regular.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 400;
-  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Regular.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 700;
-  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Bold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 800;
-  src: url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-ExtraBold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 300;
-  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Light.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 500;
-  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Medium.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: 600;
-  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-SemiBold.otf") format("truetype");
   font-style: normal;
   font-display: swap; }
 
@@ -120,6 +120,13 @@ body {
   @media (max-width: 767px) {
     .container {
       padding: 0 15px; } }
+
+body {
+  position: relative;
+  padding-top: 64px; }
+  @media (max-width: 992px) {
+    body {
+      padding-top: 91px; } }
 
 main {
   padding-top: 65px;
@@ -330,6 +337,10 @@ main {
 .header {
   background-color: #6F9890;
   height: 4.3rem;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -634,6 +645,26 @@ main {
     .footer__address p {
       margin-bottom: .8rem;
       width: 100%; }
+    .footer__address_soc-icons {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      @media (max-width: 767px) {
+        .footer__address_soc-icons {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center; } }
+      .footer__address_soc-icons > a {
+        width: 20%;
+        -webkit-transition: all ease-in-out .3s;
+        transition: all ease-in-out .3s;
+        margin-right: 10px; }
+        .footer__address_soc-icons > a:hover {
+          opacity: .7; }
+        .footer__address_soc-icons > a > img {
+          max-width: 80%; }
   .footer__services {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4550,10 +4581,10 @@ main {
   opacity: 1; }
 
 .slider__item.first {
-  background-image: url("../../../../img/home-page/slider/first-slide.jpg"); }
+  background-image: url("../../../../img/home-page/slider/first-slide.webp"); }
   @media (max-width: 767px) {
     .slider__item.first {
-      background-image: url("../../../../img/home-page/slider/first-slide-mob.png"); } }
+      background-image: url("../../../../img/home-page/slider/first-slide-mob.webp"); } }
 
 .slider__item.first .slider__item_content {
   padding-top: 10.33rem; }
@@ -4603,7 +4634,7 @@ main {
       max-width: 235px; } }
 
 .slider__item.second {
-  background-image: url("../../../../img/home-page/slider/second-slide.jpg"); }
+  background-image: url("../../../../img/home-page/slider/second-slide.webp"); }
 
 .slider__item.second .covid {
   background-color: unset;
@@ -4661,10 +4692,10 @@ main {
 
 .slider__item.third {
   color: #000;
-  background-image: url("../../../../img/home-page/slider/third-slide.jpg"); }
+  background-image: url("../../../../img/home-page/slider/third-slide.webp"); }
   @media (max-width: 767px) {
     .slider__item.third {
-      background-image: url("../../../../img/home-page/slider/third-slide-mob.png"); } }
+      background-image: url("../../../../img/home-page/slider/third-slide-mob.webp"); } }
 
 .slider__item.third .slider__item_content {
   padding-top: 160px; }
@@ -4931,13 +4962,13 @@ main {
             line-height: 132.7%; } }
 
 .slider__item.five {
-  background-image: url("../../../../img/home-page/slider/five-slide.png");
+  background-image: url("../../../../img/home-page/slider/five-slide.webp");
   padding-top: 210px;
   background-position: center top; }
   @media (max-width: 767px) {
     .slider__item.five {
       padding-top: 215px;
-      background-image: url("../../../../img/home-page/slider/five-slide-mob.png"); } }
+      background-image: url("../../../../img/home-page/slider/five-slide-mob.webp"); } }
 
 .slider__item.five .slider__item_caption {
   max-width: 400px;
@@ -5164,8 +5195,9 @@ main {
     font-weight: 300; }
 
 .third-section {
-  height: 672px;
-  background-image: url("../../../img/home-page/third-section-bg.jpg");
+  padding-top: 135px;
+  padding-bottom: 50px;
+  background-image: url("../../../img/home-page/third-section-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left bottom; }
@@ -5174,12 +5206,9 @@ main {
       height: 700px;
       background-position: top; } }
   .third-section .container {
-    position: relative;
     height: 100%; }
   .third-section .banner {
-    position: absolute;
     max-width: 545px;
-    top: 154px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2); }
     @media (max-width: 767px) {
       .third-section .banner {
@@ -5220,7 +5249,7 @@ main {
 
 .four-section {
   padding: 30px 0;
-  background-image: url("../../../img/home-page/four-section-bg.jpg");
+  background-image: url("../../../img/home-page/four-section-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }

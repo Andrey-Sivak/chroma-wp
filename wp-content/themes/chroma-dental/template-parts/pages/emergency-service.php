@@ -8,7 +8,7 @@ $result_link = get_permalink( get_the_ID() ) . 'result';
 		<h2 class="second-section__caption">DENTAL EMERGENCY SERVICE</h2>
 		<p class="second-section__subcaption">Emergency Dentist Toronto, North York</p>
 		<p class="second-section__subcaption">Immediate Appointment </p>
-		<span class="second-section__call">CALL: <a href="tel:324-234-4545">(324) 234-4545</a></span>
+		<span class="second-section__call">CALL: <a href="tel:<?php the_field('phone', 'option'); ?>"><?php the_field('phone', 'option'); ?></a></span>
 
 		<form action="<?= get_template_directory_uri() . '/mail.php'; ?>" method="post" class="second-section__form">
 			<p class="second-section__form_head">Or submit your personal details and we will Immediately contact you</p>
