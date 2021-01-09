@@ -1,0 +1,49 @@
+@import "main";
+
+@import "components/recent-posts";
+
+.post-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+
+  .post-content {
+    font-family: $roboto;
+    width: 68%;
+    margin-right: 2%;
+
+    &__title {
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    &__metadata {
+      margin: 10px 0;
+      
+      & > a {
+        font-weight: 400;
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
+    .wp-block-image {
+      width: 100%;
+      margin-bottom: 30px;
+
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

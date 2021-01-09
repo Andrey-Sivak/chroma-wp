@@ -1183,6 +1183,10 @@ main {
     .breadcrumbs .container > p {
       font-weight: 400;
       margin-right: 4px; }
+      .breadcrumbs .container > p > a {
+        color: #000; }
+        .breadcrumbs .container > p > a:hover {
+          text-decoration: underline; }
 
 .covid {
   padding: 3rem 0;

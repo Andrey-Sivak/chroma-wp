@@ -167,13 +167,14 @@ function custom_styles() {
 		wp_enqueue_script( 'fancybox', 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', array(), _S_VERSION, true );
 	} elseif ( is_page( 7 ) ) {
 		wp_enqueue_style( 'home-style', get_template_directory_uri() . '/dist/css/home-page.min.css', array(), _S_VERSION );
-//		wp_enqueue_script( 'owl-carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array(), _S_VERSION, true );
 	} elseif ( is_page( 22 ) ) {
 		wp_enqueue_style( 'contacts-style', get_template_directory_uri() . '/dist/css/contacts-page.min.css', array(), _S_VERSION );
 	} elseif ( is_page( 449 ) ) {
 		wp_enqueue_style( 'form-style', get_template_directory_uri() . '/dist/css/form-page.min.css', array(), _S_VERSION );
 	} elseif ( get_the_title() == 'Result' ) {
 		wp_enqueue_style( 'result-style', get_template_directory_uri() . '/dist/css/result-page.min.css', array(), _S_VERSION );
+	} elseif ( get_post_type() == 'post' ) {
+		wp_enqueue_style( 'single-post-style', get_template_directory_uri() . '/dist/css/single-post.min.css', array(), _S_VERSION );
 	} else {
 		wp_enqueue_style( 'services-style', get_template_directory_uri() . '/dist/css/services.min.css', array(), _S_VERSION );
 	}
