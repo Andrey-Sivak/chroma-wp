@@ -173,6 +173,8 @@ function custom_styles() {
 		wp_enqueue_style( 'form-style', get_template_directory_uri() . '/dist/css/form-page.min.css', array(), _S_VERSION );
 	} elseif ( get_the_title() == 'Result' ) {
 		wp_enqueue_style( 'result-style', get_template_directory_uri() . '/dist/css/result-page.min.css', array(), _S_VERSION );
+	} elseif ( get_the_title() == 'Blog' ) {
+		wp_enqueue_style( 'blog-style', get_template_directory_uri() . '/dist/css/blog-page.min.css', array(), _S_VERSION );
 	} elseif ( get_post_type() == 'post' ) {
 		wp_enqueue_style( 'single-post-style', get_template_directory_uri() . '/dist/css/single-post.min.css', array(), _S_VERSION );
 	} else {

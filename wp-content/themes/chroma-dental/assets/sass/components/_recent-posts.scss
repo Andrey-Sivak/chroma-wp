@@ -34,9 +34,7 @@
       }
     }
 
-    &_image {/*
-        padding: 4px;
-        border: 1px solid rgba(#000, .1);*/
+    &_image {
       max-width: 55px;
       width: 100%;
       height: 55px;
@@ -65,8 +63,8 @@
 
     &_metadata {
       color: rgba(#000, .8);
-      font-size: 12px;
-      font-weight: 300;
+      font-size: 11px;
+      font-weight: 500;
     }
   }
 }

@@ -35,7 +35,7 @@ get_header(); ?>
   <div class="breadcrumbs">
     <div class="container">
       <p>
-        <a href="#">Blog</a>
+        <a href="<?= esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>">Blog</a>
       </p>
       <p>></p>
       <p>Post</p>
@@ -44,7 +44,7 @@ get_header(); ?>
 
 	<div class="post-content">
 		<h1 class="post-content__title"><?= $title; ?></h1>
-		<p class="post-content__metadata">By <?= $author_name . ' | ' . $recent_modified_value; ?> | <a href="#">Blog</a></p>
+		<p class="post-content__metadata">By <?= $author_name . ' | ' . $recent_modified_value; ?> | <a href="<?= esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>">Blog</a></p>
 		<?= $content; ?>
 	</div>
 

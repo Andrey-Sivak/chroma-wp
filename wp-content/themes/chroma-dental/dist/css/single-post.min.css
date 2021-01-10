@@ -1320,9 +1320,6 @@ main {
       .recent-posts__item_content:hover img {
         opacity: .7; }
     .recent-posts__item_image {
-      /*
-        padding: 4px;
-        border: 1px solid rgba(#000, .1);*/
       max-width: 55px;
       width: 100%;
       height: 55px;
@@ -1363,8 +1360,8 @@ main {
         text-decoration: underline; }
     .recent-posts__item_metadata {
       color: rgba(0, 0, 0, 0.8);
-      font-size: 12px;
-      font-weight: 300; }
+      font-size: 11px;
+      font-weight: 500; }
 
 .post-page {
   display: -webkit-box;

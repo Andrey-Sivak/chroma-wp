@@ -1,6 +1,6 @@
 <aside class="recent-posts">
 	<p class="recent-posts__header">Recent posts</p>
-	<?php $params = ['numberposts' => 5, 'tax_query' => [
+	<?php $params = ['posts_per_page' => 5, 'tax_query' => [
 		array(
 			'taxonomy' => 'post_format',
 			'field'    => 'slug',
