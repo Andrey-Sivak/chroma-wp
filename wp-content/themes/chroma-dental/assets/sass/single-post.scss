@@ -3,24 +3,45 @@
 @import "components/recent-posts";
 
 .post-page {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include response-to(medium) {
+      flex-wrap: wrap;
+    }
+  }
 
   .post-content {
     font-family: $roboto;
     width: 68%;
     margin-right: 2%;
 
+    @include response-to(medium) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
     &__title {
       font-weight: 700;
       font-size: 38px;
       line-height: 1;
+
+      @include response-to(small) {
+        font-size: 24px;
+      }
     }
 
     &__metadata {
       margin: 10px 0;
+
+      @include response-to(small) {
+        font-size: 14px;
+      }
       
       & > a {
         font-weight: 400;
@@ -44,6 +65,13 @@
       font-size: 18px;
       line-height: 130%;
       margin-bottom: 1.5rem;
+
+      &.post-content__metadata {
+
+        @include response-to(small) {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

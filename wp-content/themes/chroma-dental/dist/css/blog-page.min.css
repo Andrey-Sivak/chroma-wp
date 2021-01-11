@@ -1294,6 +1294,9 @@ main {
   width: 30%;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 5px; }
+  @media (max-width: 992px) {
+    .recent-posts {
+      width: 100%; } }
   .recent-posts__header {
     background-color: #6F9890;
     color: #fff;
@@ -1369,7 +1372,16 @@ main {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    @media (max-width: 992px) {
+      .blog-page__wrap {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
   .blog-page__content {
     font-family: "Roboto";
     width: 67%;
@@ -1386,8 +1398,22 @@ main {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start; }
+    @media (max-width: 992px) {
+      .blog-page__content {
+        width: 100%; } }
+    @media (max-width: 767px) {
+      .blog-page__content {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
     .blog-page__content_column {
       width: 48%; }
+      @media (max-width: 767px) {
+        .blog-page__content_column {
+          max-width: 450px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%; } }
   .blog-page__item {
     width: 100%;
     margin-bottom: 40px;
@@ -1421,10 +1447,16 @@ main {
       margin-bottom: 15px;
       color: #6F9890;
       text-transform: uppercase; }
+      @media (max-width: 767px) {
+        .blog-page__item_title {
+          font-size: 16px; } }
     .blog-page__item_meta {
       font-weight: 300;
       font-size: 15px;
       margin-bottom: 8px; }
+      @media (max-width: 767px) {
+        .blog-page__item_meta {
+          font-size: 13px; } }
       .blog-page__item_meta > a {
         font-weight: 500;
         text-decoration: underline;
@@ -1434,6 +1466,9 @@ main {
       font-weight: 400;
       line-height: 1.2;
       word-break: break-word; }
+      @media (max-width: 767px) {
+        .blog-page__item_text {
+          display: none; } }
       .blog-page__item_text-link {
         color: #000;
         text-decoration: underline; }

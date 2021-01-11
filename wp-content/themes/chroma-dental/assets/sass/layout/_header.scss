@@ -12,6 +12,7 @@
   @include response-to(small) {
     padding: 40px 0 10px;
     height: unset;
+    //width: calc(100% - 30px);
   }
 
   &__wrap {

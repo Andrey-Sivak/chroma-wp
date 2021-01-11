@@ -30,7 +30,7 @@ $trimmed_content = wp_trim_words( $content, 40, '<a href="'. get_permalink() .'"
 
 get_header(); ?>
 
-<main class="post-page container">
+<main class="post-page">
 
   <div class="breadcrumbs">
     <div class="container">
@@ -42,15 +42,15 @@ get_header(); ?>
     </div>
   </div>
 
-	<div class="post-content">
-		<h1 class="post-content__title"><?= $title; ?></h1>
-		<p class="post-content__metadata">By <?= $author_name . ' | ' . $recent_modified_value; ?> | <a href="<?= esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>">Blog</a></p>
-		<?= $content; ?>
-	</div>
+  <div class="container post-page__container">
+    <div class="post-content">
+      <h1 class="post-content__title"><?= $title; ?></h1>
+      <p class="post-content__metadata">By <?= $author_name . ' | ' . $recent_modified_value; ?> | <a href="<?= esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>">Blog</a></p>
+	    <?= $content; ?>
+    </div>
 
-  <?php get_template_part('/template-parts/blocks/recent-projects'); ?>
-
-	<h1></h1>
+	  <?php get_template_part('/template-parts/blocks/recent-projects'); ?>
+  </div>
 </main>
 
 <?php get_footer(); ?>

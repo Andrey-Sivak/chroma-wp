@@ -68,7 +68,7 @@ get_header(); ?>
 
             $author_name = $recent_author->display_name;
             //    get date
-            $recent_modified = strtotime($post->post_modified);
+            $recent_modified = strtotime($recent_post["post_modified"]);
             $recent_modified_value = date( 'F j, Y', $recent_modified );
 
             echo "<div class='blog-page__item'>";
@@ -86,6 +86,7 @@ get_header(); ?>
           }
         }
         ?>
+
 
         <div class="blog-page__content_column">
           <?php

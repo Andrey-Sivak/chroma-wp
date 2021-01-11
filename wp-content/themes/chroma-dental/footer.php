@@ -22,6 +22,7 @@
       <a href="<?= get_home_url(); ?>" class="footer__header_link">home</a>
       <a href="<?= esc_url( get_permalink( get_page_by_title( 'About us' ) ) ); ?>" class="footer__header_link">about us</a>
       <a href="<?= esc_url( get_permalink( get_page_by_title( 'Contact us' ) ) ); ?>" class="footer__header_link">contact us</a>
+      <a href="<?= esc_url( get_permalink( get_page_by_title( 'Blog' ) ) ); ?>" class="footer__header_link">blog</a>
     </div>
     <div class="footer__main">
       <address class="footer__address">
